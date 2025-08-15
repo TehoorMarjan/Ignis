@@ -1,8 +1,12 @@
 #include <Arduino.h>
 #include <avr/interrupt.h>
+#include <tinyNeoPixel_Static.h>
+
+#define NUM_LEDS 8
 
 // Pin definitions
-#define BUTTON_PIN 2 // PA2
+#define BUTTON_PIN PIN_A2 // PA2
+#define LEDS_PIN PIN_A6   // PA6
 
 // Timing constants (in ms)
 #define DEBOUNCE_MIN_MS 30
@@ -17,6 +21,10 @@ typedef struct {
 } button_state_t;
 
 volatile button_state_t button_state = {0, 0, BTN_ACTION_NONE};
+
+byte pixels[NUM_LEDS * 3];
+
+tinyNeoPixel leds = tinyNeoPixel(NUM_LEDS, LEDS_PIN, NEO_GRB + NEO_KHZ800, pixels);
 
 // ISR pour interruption sur changement d'état du bouton
 ISR(PORTA_PORT_vect) {
@@ -60,6 +68,7 @@ void handle_button_event() {
 
 void setup() {
   pinMode(BUTTON_PIN, INPUT_PULLUP);
+  pinMode(LEDS_PIN, OUTPUT);
 
   // Configuration interruption pour ATtiny212
   // Activer interruption sur PORTA pin 2
@@ -67,7 +76,7 @@ void setup() {
 
   sei(); // Activer interruptions globales
 
-  // TODO: Disable unused peripherals for low power if needed
+  leds.show(); // Initialiser les LEDs
 }
 
 void loop() {
