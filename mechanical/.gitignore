@@ -1,0 +1,20 @@
+# FreeCAD gitignore
+*.FCBak
+*.FCBak1
+*.FCStd1
+*~
+
+# Blender gitignore
+*.blend1
+*.blend2
+*.blend@
+**/.blender_session
+
+# Fichiers temporaires 3D
+*.tmp
+*.temp
+*.autosave
+
+# Caches et previews
+**/.thumbnails/
+**/preview.png

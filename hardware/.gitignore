@@ -1,0 +1,17 @@
+# KiCad gitignore (si KiCad ne l'a pas déjà généré)
+# Fichiers de cache et temporaires
+**/*-cache.lib
+**/*-rescue.lib
+**/*.tmp
+**/*.bak
+**/*.bck
+**/*-backups/
+
+# Fichiers de fabrication (à garder si nécessaire)
+# **/*.gbr
+# **/*.drl
+# **/*.pdf
+
+# 3D models cache
+**/*.wrl.cache/
+**/*.step.cache/

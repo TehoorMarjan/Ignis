@@ -1,0 +1,51 @@
+# Configuration clang-format pour style K&R
+# Projet Ignis - Firmware ATtiny212
+
+BasedOnStyle: LLVM
+IndentWidth: 2
+TabWidth: 2
+UseTab: Never
+
+# Style K&R : accolades sur la même ligne
+BreakBeforeBraces: Attach
+
+# Paramètres spécifiques K&R
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortBlocksOnASingleLine: Empty
+
+# Largeur de ligne
+ColumnLimit: 100
+
+# Indentation
+IndentCaseLabels: true
+IndentPPDirectives: BeforeHash
+
+# Espacement
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+
+# Alignement
+AlignOperands: true
+AlignTrailingComments: true
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+
+# Pointeurs et références
+PointerAlignment: Left
+ReferenceAlignment: Left
+
+# Nouvelles lignes
+MaxEmptyLinesToKeep: 2
+KeepEmptyLinesAtTheStartOfBlocks: false
+
+# Commentaires
+ReflowComments: true
+CommentPragmas: "^ IWYU pragma:"
+
+# Sorting includes
+SortIncludes: true
+IncludeBlocks: Preserve
