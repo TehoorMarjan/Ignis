@@ -1,4 +1,4 @@
-# Firmware Ignis - Lampe "Flamme dans le sable"
+# Firmware Ignis - Lampe Ignis
 
 ## État actuel du projet
 

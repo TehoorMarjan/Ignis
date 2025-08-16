@@ -1,6 +1,6 @@
 # 🧊 STL & Exports Imprimables - Projet Ignis
 
-Ce dossier regroupe les fichiers STL prêts pour l'impression 3D, issus des modèles artistiques du projet "Flamme dans le sable".
+Ce dossier regroupe les fichiers STL prêts pour l'impression 3D, issus des modèles artistiques du projet Lampe Ignis.
 
 ## 📚 Contexte
 

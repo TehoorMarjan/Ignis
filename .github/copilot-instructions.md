@@ -1,6 +1,6 @@
 # Projet Ignis - Instructions Copilot
 
-Ce projet concerne le développement d'une lampe/veilleuse autonome "Flamme dans le sable" avec les spécifications suivantes :
+Ce projet concerne le développement d'une lampe/veilleuse autonome "Lampe Ignis" (lampe en forme de flamme dont le socle contient du sable) avec les spécifications suivantes :
 
 ## Architecture Technique
 
@@ -30,5 +30,11 @@ Ce projet concerne le développement d'une lampe/veilleuse autonome "Flamme dans
 - Programmation : UPDI pour ATtiny212
 - Patterns LED : heartbeat, chenillard, fade, random
 - Power management : sleep modes pour économie batterie
+
+
+## Convention de Commit
+
+- Tous les messages de commit doivent commencer par une emoji parlante, amusante ou sympa, si possible différente des précédents (éviter de réutiliser les deux dernières emoji utilisées, sauf si le contexte l'impose).
+- Le message doit décrire simplement les changements apportés, sans être exhaustif sur les détails mineurs pour ne pas surcharger la relecture. Privilégier un ton humain et synthétique (ex : « Nettoyage de la documentation » plutôt que lister chaque micro-changement).
 
 ✅ Clarify Project Requirements - Projet embarqué ATtiny212 avec LEDs WS2812B

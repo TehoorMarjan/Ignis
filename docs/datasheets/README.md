@@ -1,6 +1,6 @@
 # 📋 Datasheets - Projet Ignis
 
-Index des datasheets téléchargées pour le projet lampe "Flamme dans le sable".
+Index des datasheets téléchargées pour le projet Lampe Ignis.
 
 ## 🔗 Composants Principaux
 
