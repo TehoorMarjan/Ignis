@@ -48,3 +48,39 @@ Pour plus d'informations sur l'architecture, l'électronique et le firmware, con
 
 ![Screenshot Flamme1 - Low Poly](Flamme1/Flamme1_lowpoly_0001.png)
 
+### Flamme3_1
+
+- **Description** : Premier essai pour designer une flamme à partir d'un mesh travaillé et des modifiers subdivision surface et deform (twist). **Abandonné**.
+- **Fichiers** :
+  - [`Flamme3_1.blend`](Flamme3/Flamme3_1.blend) (modèle Blender)
+  - [`Flamme3_1_0001.png`](Flamme3/Flamme3_1_0001.png) (screenshot)
+
+![Screenshot Flamme3_1](Flamme3/Flamme3_1_0001.png)
+
+### Flamme3_2
+
+- **Description** : Flamme créée à partir de meshs sphériques puis des modifiers Displace, Deform (Twist), Curve et autres. Sert de base aux versions suivantes.
+- **Fichiers** :
+  - [`Flamme3_2.blend`](Flamme3/Flamme3_2.blend) (modèle Blender)
+  - [`Flamme3_2_0001.png`](Flamme3/Flamme3_2_0001.png) (screenshot)
+
+![Screenshot Flamme3_2](Flamme3/Flamme3_2_0001.png)
+
+### Flamme3_3
+
+- **Description** : Mesh de Flamme3_2 combiné et sculpté, mais beaucoup de détails perdus pendant la sculpture.
+- **Fichiers** :
+  - [`Flamme3_3.blend`](Flamme3/Flamme3_3.blend) (modèle Blender)
+  - [`Flamme3_3_0001.png`](Flamme3/Flamme3_3_0001.png) (screenshot)
+
+![Screenshot Flamme3_3](Flamme3/Flamme3_3_0001.png)
+
+### Flamme3_4 ⭐
+
+- **Description** : Mesh de Flamme3_2 repris à zéro et sculpté plus doucement, résultat prometteur. **C'est le modèle le plus abouti** de la série Flamme3.
+- **Fichiers** :
+  - [`Flamme3_4.blend`](Flamme3/Flamme3_4.blend) (modèle Blender)
+  - [`Flamme3_4.stl`](Flamme3/Flamme3_4.stl) (export impression 3D)
+  - [`Flamme3_4_0001.png`](Flamme3/Flamme3_4_0001.png) (screenshot)
+
+![Screenshot Flamme3_4](Flamme3/Flamme3_4_0001.png)

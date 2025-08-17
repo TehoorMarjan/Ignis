@@ -28,6 +28,7 @@ Pour plus d'informations sur le contexte artistique, voir le [README du dossier 
 
 - `stl/Flamme1.stl` : Export final du design Flamme1
 - `stl/Flamme2.stl` : Export final du design Flamme2
+- `stl/Flamme3.stl` : Export final du design Flamme3 (Flamme3_4)
 
 ---
 
