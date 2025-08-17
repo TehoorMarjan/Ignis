@@ -4,11 +4,19 @@
 
 ### Batterie EEMB LP402535 (320 mAh)
 
-- **Capacité nominale** : 320 mAh
-- **Tension nominale** : 3.7V
-- **Courant continu max recommandé** : 1C = 320 mA
-- **Courant max absolu** : 2C = 640 mA
-- **Température de fonctionnement** : -20°C à +60°C
+- Capacité nominale : 320 mAh
+- Tension nominale : 3.7V
+- Impédance interne : 160 mΩ
+- Charge :
+  - Courant maximum : 320 mA
+  - Tension maximum : 4.2 V
+  - Courant en fin de charge : 6.4 mA
+- Décharge :
+  - Courant maximum :2C = 640 mA
+  - Tension minimum : 2.75 V
+- Température de fonctionnement :
+  - En décharge : -20°C à +60°C
+  - En charge : 0°C à +45°C
 
 ### Consommations par composant
 
@@ -60,67 +68,89 @@ Autonomie : 320 mAh / 3 mA = 106 heures (4.4 jours)
 
 ### Programmation courant de charge via Rprog
 
-```
-Icharge = 1200V / Rprog
-```
+$$R_{PROG} = \frac{1100\,\text{V}}{I_{BAT}}$$
 
 Pour 320 mA (1C optimal) :
 
-```
-Rprog = 1200V / 0.32A = 3750 Ω ≈ 3.9 kΩ (valeur standard)
-Icharge réel = 1200 / 3900 = 0.308A = 308 mA ✓
-```
+$$R_{PROG} = \frac{1100\,\text{V}}{320\,\text{mA}} = 3.4375\,\text{k}\Omega \approx 3.9\,\text{k}\Omega$$
 
 **Composants TP4056** :
 
 - Rprog : 3.9 kΩ (0805, 1%)
-- C1 (VCC) : 10 µF (tant ou céram X7R)
+- C1 (VBUS) : 100 nF (tant ou céram X7R)
 - C2 (BAT) : 10 µF
-- LED charge : Rouge/Verte avec résistances 1 kΩ
+- LEDs charge : Rouge/Verte avec résistances 1.5 kΩ -> Seront peut-être plutôt remplacées par des entrées sur le uC pour utiliser les WS2812B
 
 ## 3. Configuration FP6277 Boost
 
 ### Réglage tension sortie (5V)
 
-Tension de sortie définie par diviseur résistif :
+La tension de sortie est définie par le pont diviseur selon :
 
-```
-Vout = 0.6V × (1 + R1/R2)
-```
+$$
+V_{out} = 0.6\,\text{V} \times \left(1 + \frac{R_1}{R_2}\right)
+$$
 
-Pour Vout = 5V :
+Pour $V_{out} = 5\,\text{V}$ :
 
-```
-5V = 0.6V × (1 + R1/R2)
-R1/R2 = 7.33
+$$
+5 = 0.6 \times \left(1 + \frac{R_1}{R_2}\right) \\
+\frac{R_1}{R_2} = \frac{5}{0.6} - 1 = 7.33
+$$
 
-Si R2 = 10 kΩ → R1 = 73.3 kΩ ≈ 75 kΩ
-```
-
-**Composants FP6277** :
-
-- L1 : Inductance 10 µH, courant sat > 1A (ex: Würth 744773110)
-- C1 (Vin) : 22 µF, 10V (tant ou céram)
-- C2 (Vout) : 47 µF, 10V
-- R1 : 75 kΩ (feedback high)
-- R2 : 10 kΩ (feedback low)
-- Diode Schottky : SS54 ou équivalent
+Si $R_2 = 10\,\text{k}\Omega$ alors $R_1 = 73.3\,\text{k}\Omega \approx 75\,\text{k}\Omega$
 
 ### Calcul inductance optimale
 
-```
-L = Vin(max) × (Vout - Vin(max)) / (ΔIL × fsw × Vout)
+L'inductance optimale pour le FP6277 se calcule avec :
+
+$$
+L = \frac{V_{in(max)} \times (V_{out} - V_{in(max)})}{V_{out} \times (\Delta I_L) \times f_{sw}}
+$$
 
 Avec :
-- Vin(max) = 4.2V (batterie pleine)
-- Vout = 5V
-- ΔIL = 0.3A (ripple 30% du courant moyen)
-- fsw = 1.4 MHz (fréquence FP6277)
 
-L = 4.2 × (5 - 4.2) / (0.3 × 1.4×10⁶ × 5) = 1.6 µH
-```
+- $V_{in(max)} = 4.2\,V$ (batterie pleine)
+- $V_{out} = 5.0\,V$
+- $\Delta I_L = 500\,\text{mA} \times 30\% = 0.15\,A$ (ripple 30% du courant moyen)
+- $f_{sw} = 1.4\,\text{MHz}$ (fréquence FP6277)
 
-**Inductance recommandée** : 10 µH (marge de sécurité)
+$$
+L = \frac{4.2 \times (5.0 - 4.2)}{5.0 \times 0.15 \times 1.4 \times 10^6} = 3.2\,\mu H
+$$
+
+**Inductance recommandée** : 3.3 µH (permet de rejoindre le design de référence)
+
+### Protection contre surintensité
+
+La limitation de courant du FP6277 se règle via une résistance entre la broche OC et la masse. La valeur de la résistance détermine le courant de déclenchement selon :
+
+$$
+I_{OCP} = \frac{180\,000}{R_{OC}} + 0.2
+$$
+
+où :
+
+- $I_{OCP}$ : courant de déclenchement (A)
+- $R_{OC}$ : résistance entre OC et GND (Ω)
+
+Pour programmer $I_{OCP} = 0.64\,\text{A}$ (640 mA, max batterie) :
+
+$$
+R_{OC} = \frac{180\,000}{I_{OCP} - 0.2} = \frac{180\,000}{0.44} = 409\,\text{k}\Omega
+$$
+
+**Choix recommandé** : $R_{OC} = 390\,\text{k}\Omega$ pour $I_{OCP} \approx 660\,\text{mA}$
+
+### Composants FP6277
+
+- L1 : Inductance 3.3 µH, courant sat > 1A (ex: Würth 744773110)
+- C1 (Vin) : 22 µF, 16V
+- C2 (Vout) : 22 µF, 16V
+- C3 (Vout) : 100 µF, 16V
+- R1 : 75 kΩ (feedback high)
+- R2 : 10 kΩ (feedback low)
+- R3 : 390 kΩ (OC)
 
 ## 4. Power-Path avec DMP1045U
 
