@@ -15,3 +15,7 @@
 # 3D models cache
 **/*.wrl.cache/
 **/*.step.cache/
+**/_autosave*
+**/fp-info-cache
+**/fp-lib-table
+**/sym-lib-table
