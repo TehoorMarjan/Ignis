@@ -1,0 +1,42 @@
+{
+  "jobs": [
+    {
+      "description": "",
+      "id": "149c4d11-ee31-49f2-b9d7-73acbcf54ccf",
+      "settings": {
+        "black_and_white": false,
+        "color_theme": "KiCad Classique",
+        "description": "",
+        "drawing_sheet": "",
+        "format": "pdf",
+        "hpgl_page_size": "default",
+        "hpgl_pen_size": 1.016,
+        "hpgl_plot_origin": "A3",
+        "min_pen_width": 847,
+        "output_dir": "",
+        "page_size": "auto",
+        "pdf_hierarchical_links": true,
+        "pdf_metadata": true,
+        "pdf_property_popups": true,
+        "plot_all": true,
+        "plot_drawing_sheet": true,
+        "use_background_color": true
+      },
+      "type": "sch_export_plot_pdf"
+    }
+  ],
+  "meta": {
+    "version": 1
+  },
+  "outputs": [
+    {
+      "description": "",
+      "id": "5bc09154-b196-4d2f-8bc5-a7e411e32d37",
+      "only": [],
+      "settings": {
+        "output_path": "/home/theo/Documents/Projets/Ignis/hardware/IgnisV1-TP4056/out/"
+      },
+      "type": "folder"
+    }
+  ]
+}

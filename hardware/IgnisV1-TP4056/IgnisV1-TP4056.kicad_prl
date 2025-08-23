@@ -111,7 +111,9 @@
     "sort_ascending": true,
     "sorting_column": 0
   },
-  "open_jobsets": [],
+  "open_jobsets": [
+    "IgnisV1-TP4056.kicad_jobset"
+  ],
   "project": {
     "files": []
   },
