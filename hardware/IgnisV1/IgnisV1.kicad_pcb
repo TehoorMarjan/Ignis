@@ -1,0 +1,3926 @@
+(kicad_pcb
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(general
+		(thickness 1.6)
+		(legacy_teardrops no)
+	)
+	(paper "A4")
+	(layers
+		(0 "F.Cu" signal)
+		(2 "B.Cu" signal)
+		(9 "F.Adhes" user "F.Adhesive")
+		(11 "B.Adhes" user "B.Adhesive")
+		(13 "F.Paste" user)
+		(15 "B.Paste" user)
+		(5 "F.SilkS" user "F.Silkscreen")
+		(7 "B.SilkS" user "B.Silkscreen")
+		(1 "F.Mask" user)
+		(3 "B.Mask" user)
+		(17 "Dwgs.User" user "User.Drawings")
+		(19 "Cmts.User" user "User.Comments")
+		(21 "Eco1.User" user "User.Eco1")
+		(23 "Eco2.User" user "User.Eco2")
+		(25 "Edge.Cuts" user)
+		(27 "Margin" user)
+		(31 "F.CrtYd" user "F.Courtyard")
+		(29 "B.CrtYd" user "B.Courtyard")
+		(35 "F.Fab" user)
+		(33 "B.Fab" user)
+		(39 "User.1" user)
+		(41 "User.2" user)
+		(43 "User.3" user)
+		(45 "User.4" user)
+	)
+	(setup
+		(pad_to_mask_clearance 0)
+		(allow_soldermask_bridges_in_footprints no)
+		(tenting front back)
+		(pcbplotparams
+			(layerselection 0x00000000_00000000_55555555_5755f5ff)
+			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
+			(disableapertmacros no)
+			(usegerberextensions no)
+			(usegerberattributes yes)
+			(usegerberadvancedattributes yes)
+			(creategerberjobfile yes)
+			(dashed_line_dash_ratio 12.000000)
+			(dashed_line_gap_ratio 3.000000)
+			(svgprecision 4)
+			(plotframeref no)
+			(mode 1)
+			(useauxorigin no)
+			(hpglpennumber 1)
+			(hpglpenspeed 20)
+			(hpglpendiameter 15.000000)
+			(pdf_front_fp_property_popups yes)
+			(pdf_back_fp_property_popups yes)
+			(pdf_metadata yes)
+			(pdf_single_document no)
+			(dxfpolygonmode yes)
+			(dxfimperialunits yes)
+			(dxfusepcbnewfont yes)
+			(psnegative no)
+			(psa4output no)
+			(plot_black_and_white yes)
+			(sketchpadsonfab no)
+			(plotpadnumbers no)
+			(hidednponfab no)
+			(sketchdnponfab yes)
+			(crossoutdnponfab yes)
+			(subtractmaskfromsilk no)
+			(outputformat 1)
+			(mirror no)
+			(drillshape 1)
+			(scaleselection 1)
+			(outputdirectory "")
+		)
+	)
+	(net 0 "")
+	(net 1 "VSYS")
+	(net 2 "VBUS")
+	(net 3 "VCC")
+	(net 4 "GND")
+	(net 5 "LED_DIN")
+	(net 6 "Net-(D2-DOUT)")
+	(net 7 "Net-(D3-DOUT)")
+	(net 8 "Net-(D4-DOUT)")
+	(net 9 "PRG_RX")
+	(net 10 "PRG_TX")
+	(net 11 "Net-(D6-DIN)")
+	(net 12 "unconnected-(D6-DOUT-Pad2)")
+	(net 13 "Net-(D7-DIN)")
+	(net 14 "VBAT")
+	(net 15 "Net-(U1-~{CHRG})")
+	(net 16 "Net-(U1-PROG)")
+	(net 17 "Net-(U1-~{STDBY})")
+	(net 18 "unconnected-(U3-PA1-Pad4)")
+	(net 19 "SSW")
+	(net 20 "~{CHRG}")
+	(net 21 "UPDI")
+	(net 22 "~{STBY}")
+	(footprint "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm_ThermalVias"
+		(layer "F.Cu")
+		(uuid "31a29dc3-e8e9-4f2d-a24f-4c7dcb5de81c")
+		(at 61.935 48.595)
+		(descr "SOIC, 8 Pin (http://www.allegromicro.com/~/media/Files/Datasheets/A4950-Datasheet.ashx#page=8), generated with kicad-footprint-generator ipc_gullwing_generator.py")
+		(tags "SOIC SO")
+		(property "Reference" "U1"
+			(at 0 -3.4 0)
+			(layer "F.SilkS")
+			(uuid "6725d3ee-cb39-4cb6-b1fc-d968de7ca65f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "TP4056-42-ESOP8"
+			(at 0 3.4 0)
+			(layer "F.Fab")
+			(uuid "a206d942-d2ac-43af-bdb0-cc1a602291f1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410121619_TOPPOWER-Nanjing-Extension-Microelectronics-TP4056-42-ESOP8_C16581.pdf"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5fd62bd6-1084-4341-a2f2-1c4b0836647d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "1A Standalone Linear Li-ion/LiPo single-cell battery charger, 4.2V ±1% charge voltage, VCC = 4.0..8.0V, SOIC-8 (SOP-8)"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "dffcbe8a-a0cf-4e9b-adf9-16085b6f1380")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "*SO*3.9x4.*P1.27mm*EP2.4*x3.3*mm*")
+		(path "/15bbfbc8-516a-4f9b-a366-e46a6ce18f14")
+		(sheetname "/")
+		(sheetfile "IgnisV1.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start 0 -2.56)
+			(end -1.95 -2.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "bbca4b64-98e0-4b3f-bb8c-caaccb2ee1ef")
+		)
+		(fp_line
+			(start 0 -2.56)
+			(end 1.95 -2.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "351676ce-0829-41b3-8e54-046fc02d2701")
+		)
+		(fp_line
+			(start 0 2.56)
+			(end -1.95 2.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "b12140af-6929-497b-9208-3a631a36b8a1")
+		)
+		(fp_line
+			(start 0 2.56)
+			(end 1.95 2.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "e9e5e559-5dcf-4903-bd9b-44b95cd3a5c0")
+		)
+		(fp_poly
+			(pts
+				(xy -2.7 -2.465) (xy -2.94 -2.795) (xy -2.46 -2.795)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill yes)
+			(layer "F.SilkS")
+			(uuid "3acf34f6-b17c-4a00-855b-e5b3ef98d9bd")
+		)
+		(fp_line
+			(start -3.7 -2.46)
+			(end -2.2 -2.46)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "dc880455-914d-4195-a730-56024165b3e7")
+		)
+		(fp_line
+			(start -3.7 2.46)
+			(end -3.7 -2.46)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "3660540c-e374-4496-92db-768d675bf60c")
+		)
+		(fp_line
+			(start -2.2 -2.7)
+			(end 2.2 -2.7)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "e851a6ef-3138-4dda-bd68-adcf5f0d7b24")
+		)
+		(fp_line
+			(start -2.2 -2.46)
+			(end -2.2 -2.7)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "c18407fa-8d55-429e-874b-1141e564b2b0")
+		)
+		(fp_line
+			(start -2.2 2.46)
+			(end -3.7 2.46)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "83cf39b3-e4ef-4429-a465-1e7123603601")
+		)
+		(fp_line
+			(start -2.2 2.7)
+			(end -2.2 2.46)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "eb89e6a9-d9de-43d2-b72e-b453c43e2f57")
+		)
+		(fp_line
+			(start 2.2 -2.7)
+			(end 2.2 -2.46)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "f68eca64-d3b0-43d8-a71c-9748b21ce003")
+		)
+		(fp_line
+			(start 2.2 -2.46)
+			(end 3.7 -2.46)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "885d7a31-3919-4fc0-9b4b-e410ad0f4d7a")
+		)
+		(fp_line
+			(start 2.2 2.46)
+			(end 2.2 2.7)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "d53e5af9-4848-477d-8433-8c8d5bfd21ae")
+		)
+		(fp_line
+			(start 2.2 2.7)
+			(end -2.2 2.7)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "f1d49371-ec6b-42a7-a4cf-19509bc907ff")
+		)
+		(fp_line
+			(start 3.7 -2.46)
+			(end 3.7 2.46)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "66e6a5b0-93e1-426c-9ddc-241eafa461cc")
+		)
+		(fp_line
+			(start 3.7 2.46)
+			(end 2.2 2.46)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "71ddc448-7e20-4fea-98dc-334db1b09592")
+		)
+		(fp_line
+			(start -1.95 -1.475)
+			(end -0.975 -2.45)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "a7eed1f9-d138-4dbe-b7bc-44df15177856")
+		)
+		(fp_line
+			(start -1.95 2.45)
+			(end -1.95 -1.475)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "ec8e410a-22fb-49d4-b964-c98d820dedc8")
+		)
+		(fp_line
+			(start -0.975 -2.45)
+			(end 1.95 -2.45)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "cc844624-e1d0-4fb2-8881-12808011bad6")
+		)
+		(fp_line
+			(start 1.95 -2.45)
+			(end 1.95 2.45)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "81d54b18-2f24-4114-b590-b04aad3c228f")
+		)
+		(fp_line
+			(start 1.95 2.45)
+			(end -1.95 2.45)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "0a1cec30-0546-4427-815e-ca4b7780754e")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "31027fec-6272-45a3-9929-64a6bb520ec3")
+			(effects
+				(font
+					(size 0.98 0.98)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" smd roundrect
+			(at -0.6 -0.825)
+			(size 1.01 1.38)
+			(layers "F.Paste")
+			(roundrect_rratio 0.247525)
+			(uuid "6036c655-45c6-47f1-944f-afe88b5f017a")
+		)
+		(pad "" smd roundrect
+			(at -0.6 0.825)
+			(size 1.01 1.38)
+			(layers "F.Paste")
+			(roundrect_rratio 0.247525)
+			(uuid "87acd043-0282-44a8-b0e3-0fefa4f4c836")
+		)
+		(pad "" smd roundrect
+			(at 0.6 -0.825)
+			(size 1.01 1.38)
+			(layers "F.Paste")
+			(roundrect_rratio 0.247525)
+			(uuid "6e131b41-3f81-42f0-9ace-8867384c3c20")
+		)
+		(pad "" smd roundrect
+			(at 0.6 0.825)
+			(size 1.01 1.38)
+			(layers "F.Paste")
+			(roundrect_rratio 0.247525)
+			(uuid "a64373fe-5fdb-491a-89d6-2f5c6a94b459")
+		)
+		(pad "1" smd roundrect
+			(at -2.475 -1.905)
+			(size 1.95 0.6)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 4 "GND")
+			(pinfunction "TEMP")
+			(pintype "input")
+			(uuid "45a68779-ec55-4e25-8334-fa9b6fa11140")
+		)
+		(pad "2" smd roundrect
+			(at -2.475 -0.635)
+			(size 1.95 0.6)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 16 "Net-(U1-PROG)")
+			(pinfunction "PROG")
+			(pintype "passive")
+			(uuid "20775bcd-1f0a-4329-bec0-be0a66a856a7")
+		)
+		(pad "3" smd roundrect
+			(at -2.475 0.635)
+			(size 1.95 0.6)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 4 "GND")
+			(pinfunction "GND")
+			(pintype "power_in")
+			(uuid "780796a3-fa09-4d4f-a037-feaec5f65e3c")
+		)
+		(pad "4" smd roundrect
+			(at -2.475 1.905)
+			(size 1.95 0.6)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 2 "VBUS")
+			(pinfunction "V_{CC}")
+			(pintype "power_in")
+			(uuid "c2cb6ae3-fe17-447c-a8a6-9e6ecadf3c39")
+		)
+		(pad "5" smd roundrect
+			(at 2.475 1.905)
+			(size 1.95 0.6)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 14 "VBAT")
+			(pinfunction "BAT")
+			(pintype "power_out")
+			(uuid "cc8a02b8-abd7-496e-9238-077a9ead846b")
+		)
+		(pad "6" smd roundrect
+			(at 2.475 0.635)
+			(size 1.95 0.6)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 17 "Net-(U1-~{STDBY})")
+			(pinfunction "~{STDBY}")
+			(pintype "open_collector")
+			(uuid "3a0756f2-dce0-4cd6-8625-0be78843ba23")
+		)
+		(pad "7" smd roundrect
+			(at 2.475 -0.635)
+			(size 1.95 0.6)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 15 "Net-(U1-~{CHRG})")
+			(pinfunction "~{CHRG}")
+			(pintype "open_collector")
+			(uuid "012d0b8e-0108-4637-86fb-e5de822b3ae9")
+		)
+		(pad "8" smd roundrect
+			(at 2.475 -1.905)
+			(size 1.95 0.6)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 2 "VBUS")
+			(pinfunction "CE")
+			(pintype "input")
+			(uuid "cfd3912a-2804-4460-9e90-7e49fe318bb1")
+		)
+		(pad "9" thru_hole circle
+			(at -0.7 -1.2)
+			(size 0.5 0.5)
+			(drill 0.2)
+			(property pad_prop_heatsink)
+			(layers "*.Cu")
+			(remove_unused_layers no)
+			(net 4 "GND")
+			(pinfunction "EPAD")
+			(pintype "passive")
+			(uuid "b1b3dc7f-aa60-47c1-9a8a-846758a0f00e")
+		)
+		(pad "9" thru_hole circle
+			(at -0.7 0)
+			(size 0.5 0.5)
+			(drill 0.2)
+			(property pad_prop_heatsink)
+			(layers "*.Cu")
+			(remove_unused_layers no)
+			(net 4 "GND")
+			(pinfunction "EPAD")
+			(pintype "passive")
+			(uuid "00f639cd-2fc7-46d3-84dc-01b1f8a25470")
+		)
+		(pad "9" thru_hole circle
+			(at -0.7 1.2)
+			(size 0.5 0.5)
+			(drill 0.2)
+			(property pad_prop_heatsink)
+			(layers "*.Cu")
+			(remove_unused_layers no)
+			(net 4 "GND")
+			(pinfunction "EPAD")
+			(pintype "passive")
+			(uuid "63149399-6d2d-43fb-ac8c-3e300a4222a4")
+		)
+		(pad "9" smd rect
+			(at 0 0)
+			(size 1.9 2.9)
+			(property pad_prop_heatsink)
+			(layers "B.Cu")
+			(net 4 "GND")
+			(pinfunction "EPAD")
+			(pintype "passive")
+			(zone_connect 2)
+			(uuid "9d23f396-3edc-453a-83e1-28627e63e9e0")
+		)
+		(pad "9" smd rect
+			(at 0 0)
+			(size 2.41 3.3)
+			(property pad_prop_heatsink)
+			(layers "F.Cu" "F.Mask")
+			(net 4 "GND")
+			(pinfunction "EPAD")
+			(pintype "passive")
+			(zone_connect 2)
+			(uuid "22f9dc68-8ccd-4201-a4ad-fbded375a967")
+		)
+		(pad "9" thru_hole circle
+			(at 0.7 -1.2)
+			(size 0.5 0.5)
+			(drill 0.2)
+			(property pad_prop_heatsink)
+			(layers "*.Cu")
+			(remove_unused_layers no)
+			(net 4 "GND")
+			(pinfunction "EPAD")
+			(pintype "passive")
+			(uuid "c5159070-8c03-49bd-bce6-4feda70fa9da")
+		)
+		(pad "9" thru_hole circle
+			(at 0.7 0)
+			(size 0.5 0.5)
+			(drill 0.2)
+			(property pad_prop_heatsink)
+			(layers "*.Cu")
+			(remove_unused_layers no)
+			(net 4 "GND")
+			(pinfunction "EPAD")
+			(pintype "passive")
+			(uuid "7296e707-ce5a-41c4-b423-dbfca70069ed")
+		)
+		(pad "9" thru_hole circle
+			(at 0.7 1.2)
+			(size 0.5 0.5)
+			(drill 0.2)
+			(property pad_prop_heatsink)
+			(layers "*.Cu")
+			(remove_unused_layers no)
+			(net 4 "GND")
+			(pinfunction "EPAD")
+			(pintype "passive")
+			(uuid "d66969b0-96d5-4b86-9c40-ef591dbbedc3")
+		)
+		(embedded_fonts no)
+		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(layer "F.Cu")
+		(uuid "39966e72-7377-40c8-bd58-d5233d430716")
+		(at 53.65 75.03)
+		(descr "5.0mm x 5.0mm Addressable RGB LED NeoPixel, https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf")
+		(tags "LED RGB NeoPixel PLCC-4 5050")
+		(property "Reference" "D7"
+			(at 0 -3.5 0)
+			(layer "F.SilkS")
+			(uuid "388b677c-329a-4e9f-a221-ba3eb9eb1622")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "WS2812B"
+			(at 0 4 0)
+			(layer "F.Fab")
+			(uuid "1e882c76-29bf-4711-9505-76f764f4f183")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8bffd92b-f29c-4217-b9d1-8f2c5152d477")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c68a9725-8e2b-47e8-a50c-53e5fa4f87de")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "LED*WS2812*PLCC*5.0x5.0mm*P3.2mm*")
+		(path "/cf677895-7d08-4c49-bd8e-1ab9ee86e0a2")
+		(sheetname "/")
+		(sheetfile "IgnisV1.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start -3.5 -2.75)
+			(end -3.5 2.75)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "81eaee63-8ecd-40b0-8ff9-a5f7caa5314a")
+		)
+		(fp_line
+			(start -3.5 -2.75)
+			(end 3.5 -2.75)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "d337e43c-ea68-4c71-ba73-6cbeb60fe45d")
+		)
+		(fp_line
+			(start -3.5 2.75)
+			(end 3.05 2.75)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "0b8530b8-3b98-4e48-b115-c288fe2a65d5")
+		)
+		(fp_line
+			(start -2.7 0.9)
+			(end -2.7 -0.9)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "d5c6f9f9-3fd1-410c-8c35-41001536f90a")
+		)
+		(fp_line
+			(start 2.7 0.9)
+			(end 2.7 -0.9)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "02c9e122-87f1-4d45-ad05-bc977257cd04")
+		)
+		(fp_line
+			(start 3.05 2.75)
+			(end 3.5 2.3)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "4cceb956-1bcc-4ecd-9bfa-8f05887ae454")
+		)
+		(fp_line
+			(start 3.5 2.3)
+			(end 3.5 -2.75)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "e3873866-5886-4fa1-b76a-e518ff79cf1d")
+		)
+		(fp_line
+			(start -3.45 -2.75)
+			(end -3.45 2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "6d06ee46-d24e-49e7-b645-3d1b6c288141")
+		)
+		(fp_line
+			(start -3.45 2.75)
+			(end 3.45 2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "79f0fef1-988b-4cae-84b6-ce687658e365")
+		)
+		(fp_line
+			(start 3.45 -2.75)
+			(end -3.45 -2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "f2ae38dd-d410-4bbc-8d5b-7a0bf365ab4f")
+		)
+		(fp_line
+			(start 3.45 2.75)
+			(end 3.45 -2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "cc95ec33-a109-4579-8d26-a246dbc017ac")
+		)
+		(fp_line
+			(start -2.5 -2.5)
+			(end -2.5 2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "a1da3c20-b8ed-4ce1-bf24-5c90f7753c49")
+		)
+		(fp_line
+			(start -2.5 2.5)
+			(end 2.5 2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "8ff48ce0-e734-4bc4-b5f3-80550c037465")
+		)
+		(fp_line
+			(start 2.5 -2.5)
+			(end -2.5 -2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "3929d15f-4dc0-4d6f-9dfc-934ef68697b6")
+		)
+		(fp_line
+			(start 2.5 1.5)
+			(end 1.5 2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "06c17549-b5e7-42c2-8d95-bba0af93b0d3")
+		)
+		(fp_line
+			(start 2.5 2.5)
+			(end 2.5 -2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "bfe1efc5-0a35-4c78-bb3c-5f9dfefdc2f8")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 0 -2)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "d22d5696-5639-4a35-8535-8ae34814a3af")
+		)
+		(fp_text user "1"
+			(at -4 -1.6 0)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "3ebf4549-3e0b-4f2f-bec8-69d4d681fe42")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "d62945d8-7a81-41c0-bb41-fe6554c9714e")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -2.45 -1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 3 "VCC")
+			(pinfunction "VDD")
+			(pintype "power_in")
+			(uuid "eaf08bcf-4016-49c0-b6f5-f2b2e1e19d24")
+		)
+		(pad "2" smd roundrect
+			(at -2.45 1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 11 "Net-(D6-DIN)")
+			(pinfunction "DOUT")
+			(pintype "output")
+			(uuid "c8218b52-85b6-4ef3-9454-4eafbffcdf24")
+		)
+		(pad "3" smd roundrect
+			(at 2.45 1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 4 "GND")
+			(pinfunction "VSS")
+			(pintype "power_in")
+			(uuid "aa223413-229f-4e1e-89e3-92cb2bff2908")
+		)
+		(pad "4" smd roundrect
+			(at 2.45 -1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 13 "Net-(D7-DIN)")
+			(pinfunction "DIN")
+			(pintype "input")
+			(uuid "0d6ac5bf-d895-49f0-88fd-16809f062607")
+		)
+		(embedded_fonts no)
+		(model "${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "Ignis:CONN02_530480210_MOL"
+		(layer "F.Cu")
+		(uuid "40219fbe-cc82-4031-8c73-5338a23e0528")
+		(at 62.2459 61.44)
+		(tags "530480210 ")
+		(property "Reference" "J1"
+			(at 0.625 0 0)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "68a093aa-a017-45e1-9156-d777d0a49d62")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "530480210"
+			(at 0.625 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(uuid "731c0147-f143-4d68-808d-cd0f2b2e3d17")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.molex.com/en-us/products/part-detail-pdf/530480210?display=pdf"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "def2d1eb-98eb-4c2f-bd35-ef4e11729eb3")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "94e12bcb-05dd-4120-abab-7a745376e3d1")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "CONN02_530480210_MOL")
+		(path "/85488ac5-ffe8-477b-ab1e-789196152b11")
+		(sheetname "/")
+		(sheetfile "IgnisV1.kicad_sch")
+		(attr through_hole)
+		(fp_line
+			(start -1.6229 -1.177)
+			(end -1.6229 4.5888)
+			(stroke
+				(width 0.1524)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "e8f01b82-5c26-4072-9f7e-87c01495068c")
+		)
+		(fp_line
+			(start -1.6229 4.5888)
+			(end 2.8729 4.5888)
+			(stroke
+				(width 0.1524)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "9178fd53-9793-4b09-86c1-ba565d1acdca")
+		)
+		(fp_line
+			(start 2.8729 -1.177)
+			(end -1.6229 -1.177)
+			(stroke
+				(width 0.1524)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "59669435-3abb-4b88-a9e1-95f9c9ad95b2")
+		)
+		(fp_line
+			(start 2.8729 4.5888)
+			(end 2.8729 -1.177)
+			(stroke
+				(width 0.1524)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "fa000045-76e8-4daf-9b83-335ed2f9696d")
+		)
+		(fp_circle
+			(center -3.4009 0)
+			(end -3.0199 0)
+			(stroke
+				(width 0.508)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.SilkS")
+			(uuid "e3d3ecc5-9abe-40c0-81db-c2bb89476789")
+		)
+		(fp_circle
+			(center -3.4009 0)
+			(end -3.0199 0)
+			(stroke
+				(width 0.508)
+				(type solid)
+			)
+			(fill no)
+			(layer "B.SilkS")
+			(uuid "5be7914b-3e9e-4503-8646-314ef37aa4b6")
+		)
+		(fp_line
+			(start -1.7499 -1.304)
+			(end -1.7499 4.7158)
+			(stroke
+				(width 0.1524)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "7d233ab0-3955-4ac8-afc0-72e094aeea5c")
+		)
+		(fp_line
+			(start -1.7499 4.7158)
+			(end 2.9999 4.7158)
+			(stroke
+				(width 0.1524)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "7b3570e4-d1fa-40bf-9ff4-027f5a0fe0bf")
+		)
+		(fp_line
+			(start 2.9999 -1.304)
+			(end -1.7499 -1.304)
+			(stroke
+				(width 0.1524)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "735c722f-66dd-423a-984d-51cce8e4e894")
+		)
+		(fp_line
+			(start 2.9999 4.7158)
+			(end 2.9999 -1.304)
+			(stroke
+				(width 0.1524)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "7a976877-6046-44fc-8ef3-27fe6e3c9a29")
+		)
+		(fp_line
+			(start -1.4959 -1.05)
+			(end -1.4959 4.4618)
+			(stroke
+				(width 0.0254)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "46ed7a5e-f386-40db-8a2d-67e4bb7406f0")
+		)
+		(fp_line
+			(start -1.4959 4.4618)
+			(end 2.7459 4.4618)
+			(stroke
+				(width 0.0254)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "b60315e2-c3da-417a-9f3f-c29212e39f61")
+		)
+		(fp_line
+			(start 2.7459 -1.05)
+			(end -1.4959 -1.05)
+			(stroke
+				(width 0.0254)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "d3b09f99-9828-42de-bb59-1ca827f2a13c")
+		)
+		(fp_line
+			(start 2.7459 4.4618)
+			(end 2.7459 -1.05)
+			(stroke
+				(width 0.0254)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "3b3de2a1-2ea2-4172-a8c1-d360697eaf51")
+		)
+		(fp_circle
+			(center 0 -1.905)
+			(end 0.381 -1.905)
+			(stroke
+				(width 0.508)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "3828382a-45a7-4ec7-9043-22f7f47973cd")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0.625 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(uuid "dc773cc9-ac62-4e0a-8eff-39de4ef2f16f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 1.0668 1.0668)
+			(drill 0.5588)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 14 "VBAT")
+			(pinfunction "1")
+			(pintype "unspecified")
+			(uuid "7278da31-aede-4d59-86c5-04da4e88c7ec")
+		)
+		(pad "2" thru_hole circle
+			(at 1.25 0)
+			(size 1.0668 1.0668)
+			(drill 0.5588)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 4 "GND")
+			(pinfunction "2")
+			(pintype "unspecified")
+			(uuid "053ac40d-bed4-4c33-a2f2-96b199378075")
+		)
+		(embedded_fonts no)
+		(embedded_files
+			(file
+				(name "MOLEX-53048-0210.stp")
+				(type model)
+				(checksum "0680C8B83FBA55E80A733352AE275C2E")
+			)
+		)
+		(model "kicad-embed://MOLEX-53048-0210.stp"
+			(offset
+				(xyz 0.65 -5.45 0.35)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
+			)
+		)
+	)
+	(footprint "Diode_SMD:D_SOD-123"
+		(layer "F.Cu")
+		(uuid "90d8c098-7fdb-48e3-82e0-93f213b1c898")
+		(at 60.63 72.955)
+		(descr "SOD-123")
+		(tags "SOD-123")
+		(property "Reference" "D5"
+			(at 0 -2 0)
+			(layer "F.SilkS")
+			(uuid "f685a85b-36ac-482a-89e8-08ec689aafae")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "LBAT46T1G"
+			(at 0 2.1 0)
+			(layer "F.Fab")
+			(uuid "62b70051-4f69-468e-8302-2f34709fce99")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a04709bd-976f-4a18-a75e-b80d82788d8f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "Schottky diode"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9a7e7e9e-129a-40df-a017-f1810c961641")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
+		(path "/3eb9e5a7-1e7d-4964-b672-5d567eeb324e")
+		(sheetname "/")
+		(sheetfile "IgnisV1.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start -2.36 -1)
+			(end -2.36 1)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "78b9bae2-b468-4c58-b6fe-3166450af545")
+		)
+		(fp_line
+			(start -2.36 -1)
+			(end 1.65 -1)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "fda082bf-26a2-40f6-b0ac-0557cba23476")
+		)
+		(fp_line
+			(start -2.36 1)
+			(end 1.65 1)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "13349e13-943a-48cf-99be-8cb1984d4a9e")
+		)
+		(fp_line
+			(start -2.35 -1.15)
+			(end -2.35 1.15)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "d8660f4b-a09b-4255-bcb5-00fe2dd40b4c")
+		)
+		(fp_line
+			(start -2.35 -1.15)
+			(end 2.35 -1.15)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "3912e593-4279-43ee-9598-1e98527f0328")
+		)
+		(fp_line
+			(start 2.35 -1.15)
+			(end 2.35 1.15)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "ffaf6b35-47c5-44cc-98d0-6ee3c6e9a7b6")
+		)
+		(fp_line
+			(start 2.35 1.15)
+			(end -2.35 1.15)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "f75ac2d1-d9e6-4097-8979-c16d32a8569a")
+		)
+		(fp_line
+			(start -1.4 -0.9)
+			(end 1.4 -0.9)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "cdbb3cea-05a2-4bf6-950e-cae797a799bf")
+		)
+		(fp_line
+			(start -1.4 0.9)
+			(end -1.4 -0.9)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "7319de0e-3ce9-4484-b26d-d027ed19ce47")
+		)
+		(fp_line
+			(start -0.75 0)
+			(end -0.35 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "b143677c-1faf-4a15-8106-04c2d10e18cf")
+		)
+		(fp_line
+			(start -0.35 0)
+			(end -0.35 -0.55)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "f4aa80f9-e1f4-482e-a4a4-e373e7e4de10")
+		)
+		(fp_line
+			(start -0.35 0)
+			(end -0.35 0.55)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "a59ff960-128b-4b8f-8803-c64b6d731fd9")
+		)
+		(fp_line
+			(start -0.35 0)
+			(end 0.25 -0.4)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "bd441cb0-66cf-41cf-bcf5-af61e32fd9e8")
+		)
+		(fp_line
+			(start 0.25 -0.4)
+			(end 0.25 0.4)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "11f2511d-567f-4ad8-8b32-8062866b24cc")
+		)
+		(fp_line
+			(start 0.25 0)
+			(end 0.75 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "ef83469c-cdb3-4569-8d8e-d8ba72e9f96f")
+		)
+		(fp_line
+			(start 0.25 0.4)
+			(end -0.35 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "035e2126-884c-4916-b7ee-b6f094f0ff13")
+		)
+		(fp_line
+			(start 1.4 -0.9)
+			(end 1.4 0.9)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "737a18c1-e558-412e-823c-6a4f41d564f2")
+		)
+		(fp_line
+			(start 1.4 0.9)
+			(end -1.4 0.9)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "b93521e3-6f57-4aae-8d1a-2f2e115322de")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 -2 0)
+			(layer "F.Fab")
+			(uuid "024b5025-dd7f-499c-8e7c-b5a802d5f1c8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -1.65 0)
+			(size 0.9 1.2)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 9 "PRG_RX")
+			(pinfunction "K")
+			(pintype "passive")
+			(uuid "7998b067-f76a-49d6-a3f4-7dbb8b5f6567")
+		)
+		(pad "2" smd roundrect
+			(at 1.65 0)
+			(size 0.9 1.2)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 10 "PRG_TX")
+			(pinfunction "A")
+			(pintype "passive")
+			(uuid "b6306bd0-a1ed-49e5-8dfe-a73b4064ea1a")
+		)
+		(embedded_fonts no)
+		(model "${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "Diode_SMD:D_SMA"
+		(layer "F.Cu")
+		(uuid "998ee0ce-4dad-476a-84de-cad272c4ac44")
+		(at 61.78 69.005)
+		(descr "Diode SMA (DO-214AC)")
+		(tags "Diode SMA (DO-214AC)")
+		(property "Reference" "D1"
+			(at 0 -2.5 0)
+			(layer "F.SilkS")
+			(uuid "d2878927-6ad7-4da0-8428-43264b53806e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "SS34"
+			(at 0 2.6 0)
+			(layer "F.Fab")
+			(uuid "43f4ffc1-6dc4-44d7-8f37-1526916bf2b8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/88751/ss32.pdf"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9c6c2e52-c3b7-400c-960d-4f1883ac7e45")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "40V 3A Schottky Diode, SMA"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6c781199-ec76-4aa6-9a07-ac27a03a21ba")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "D*SMA*")
+		(path "/7b1ff144-9ae9-4134-9add-7f14c4619118")
+		(sheetname "/")
+		(sheetfile "IgnisV1.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start -3.51 -1.65)
+			(end -3.51 1.65)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "b4fcefb2-48a6-4b82-b326-7dc958e444b1")
+		)
+		(fp_line
+			(start -3.51 -1.65)
+			(end 2 -1.65)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "22d7fde6-aeeb-49db-ac74-4c8ce4b2ee7f")
+		)
+		(fp_line
+			(start -3.51 1.65)
+			(end 2 1.65)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "fb2d1c60-4153-4836-8f6e-126db3fe37c5")
+		)
+		(fp_line
+			(start -3.5 -1.75)
+			(end 3.5 -1.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "6909d3cd-07ba-4675-83ca-a3890ccafeb7")
+		)
+		(fp_line
+			(start -3.5 1.75)
+			(end -3.5 -1.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "75f73ec0-bc9d-486b-b8a2-b4b2f8ae5e5b")
+		)
+		(fp_line
+			(start 3.5 -1.75)
+			(end 3.5 1.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "7dd0066a-5105-4ce2-a2b5-1362f1db1f6a")
+		)
+		(fp_line
+			(start 3.5 1.75)
+			(end -3.5 1.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "415ae03f-3c44-46c9-a79f-19680f34e208")
+		)
+		(fp_line
+			(start -2.3 1.5)
+			(end -2.3 -1.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "4146ce9a-c1d0-48a9-b0ed-fcff028db13f")
+		)
+		(fp_line
+			(start -0.64944 -0.79908)
+			(end -0.64944 0.80112)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "5b492112-9b6b-412c-8c96-0fcfb35d92da")
+		)
+		(fp_line
+			(start -0.64944 0.00102)
+			(end -1.55114 0.00102)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "d5ec64df-0c39-4bc1-b2f4-3b8824077fdc")
+		)
+		(fp_line
+			(start -0.64944 0.00102)
+			(end 0.50118 -0.79908)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "69d4e538-c312-4ebc-a4a9-3b8d6ec01235")
+		)
+		(fp_line
+			(start -0.64944 0.00102)
+			(end 0.50118 0.75032)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "cd1d875c-a0c5-4bc2-9640-516e5d0dd94e")
+		)
+		(fp_line
+			(start 0.50118 0.00102)
+			(end 1.4994 0.00102)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "7a5b386e-b525-43f3-96a3-7ade673c2689")
+		)
+		(fp_line
+			(start 0.50118 0.75032)
+			(end 0.50118 -0.79908)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "34e005ee-0a72-41d4-a113-582f43a15675")
+		)
+		(fp_line
+			(start 2.3 -1.5)
+			(end -2.3 -1.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "571c46ac-bc04-4c97-a849-b52439a35937")
+		)
+		(fp_line
+			(start 2.3 -1.5)
+			(end 2.3 1.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "48f3d2a1-7dfb-4448-ae35-903a2d045fec")
+		)
+		(fp_line
+			(start 2.3 1.5)
+			(end -2.3 1.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "1e07cbc0-2019-44c4-8f0c-5ba7d33170d5")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 -2.5 0)
+			(layer "F.Fab")
+			(uuid "89593079-7de5-422e-b8ce-9b519403162e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -2 0)
+			(size 2.5 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1388888889)
+			(net 1 "VSYS")
+			(pinfunction "K")
+			(pintype "passive")
+			(uuid "7a9296db-fde0-42de-9704-012d3dd98b07")
+		)
+		(pad "2" smd roundrect
+			(at 2 0)
+			(size 2.5 1.8)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1388888889)
+			(net 2 "VBUS")
+			(pinfunction "A")
+			(pintype "passive")
+			(uuid "ece765e3-5da1-4510-b17a-58938869ffec")
+		)
+		(embedded_fonts no)
+		(model "${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SMA.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+		(layer "F.Cu")
+		(uuid "9e49edac-6c58-45a4-8169-20efe0b49973")
+		(at 61.935 55.175)
+		(descr "SOIC, 8 Pin (JEDEC MS-012AA, https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/soic_narrow-r/r_8.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py")
+		(tags "SOIC SO")
+		(property "Reference" "U3"
+			(at 0 -3.4 0)
+			(layer "F.SilkS")
+			(uuid "9ee82da9-6083-48ab-a02f-c0ad2b5a441d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ATtiny212-SS"
+			(at 0 3.4 0)
+			(layer "F.Fab")
+			(uuid "2933b7fa-2045-4ae1-9302-5d2e85f4d4bd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/40001911A.pdf"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bd1aa048-6184-475d-87eb-7f9b101598df")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "20MHz, 2kB Flash, 128B SRAM, 64B EEPROM, SOIC-8"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a869d9df-c177-44b7-8e06-f2227183652d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "SOIC*3.9x4.9mm*P1.27mm*")
+		(path "/541350dd-7ec1-41a1-9f1d-36a208355c3b")
+		(sheetname "/")
+		(sheetfile "IgnisV1.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start 0 -2.56)
+			(end -1.95 -2.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "e15b7a4e-e7b3-4233-ba28-2ef6346b3103")
+		)
+		(fp_line
+			(start 0 -2.56)
+			(end 1.95 -2.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "05289202-96f9-4044-9406-7fc9cd37c9bc")
+		)
+		(fp_line
+			(start 0 2.56)
+			(end -1.95 2.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "589226f7-7183-45b8-89c7-2e5b91be5b43")
+		)
+		(fp_line
+			(start 0 2.56)
+			(end 1.95 2.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "593dfc09-6062-4d37-95cf-1fbf38b61461")
+		)
+		(fp_poly
+			(pts
+				(xy -2.7 -2.465) (xy -2.94 -2.795) (xy -2.46 -2.795)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill yes)
+			(layer "F.SilkS")
+			(uuid "ad3bd3b1-1d50-4410-bcc3-4b71fce4d768")
+		)
+		(fp_line
+			(start -3.7 -2.46)
+			(end -2.2 -2.46)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "c83353cd-a2a4-41b2-b982-a41b7c0dd5f8")
+		)
+		(fp_line
+			(start -3.7 2.46)
+			(end -3.7 -2.46)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "c2b5c6e8-fcfa-4da4-96de-782ba827d78f")
+		)
+		(fp_line
+			(start -2.2 -2.7)
+			(end 2.2 -2.7)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "ddf7d63e-5107-4179-b8df-2373fd205324")
+		)
+		(fp_line
+			(start -2.2 -2.46)
+			(end -2.2 -2.7)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "fd260182-15fd-43b3-bc2f-074aaea6ec2c")
+		)
+		(fp_line
+			(start -2.2 2.46)
+			(end -3.7 2.46)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "21761b1e-e5cb-4aae-b333-419ae26b243b")
+		)
+		(fp_line
+			(start -2.2 2.7)
+			(end -2.2 2.46)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "11b8ef86-1e70-4e1b-a585-214cec06dc49")
+		)
+		(fp_line
+			(start 2.2 -2.7)
+			(end 2.2 -2.46)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "7e080818-2364-42f7-98d0-84306ebcca91")
+		)
+		(fp_line
+			(start 2.2 -2.46)
+			(end 3.7 -2.46)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "7848f799-3ba1-4816-b065-48755c15bc3c")
+		)
+		(fp_line
+			(start 2.2 2.46)
+			(end 2.2 2.7)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "dd787d8f-abc3-44d7-8875-7e467c31409e")
+		)
+		(fp_line
+			(start 2.2 2.7)
+			(end -2.2 2.7)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "76cdbac0-4d1a-4041-8f2f-0b2bfb90cb31")
+		)
+		(fp_line
+			(start 3.7 -2.46)
+			(end 3.7 2.46)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "aaa33f8d-88e2-4059-a118-ee3925864a26")
+		)
+		(fp_line
+			(start 3.7 2.46)
+			(end 2.2 2.46)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "b81bbdf3-0499-4509-bc48-3d1f1e47e761")
+		)
+		(fp_line
+			(start -1.95 -1.475)
+			(end -0.975 -2.45)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "dc93150e-50de-4dd4-bf34-7cf7fd27de4e")
+		)
+		(fp_line
+			(start -1.95 2.45)
+			(end -1.95 -1.475)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "db8c00de-42b6-4236-839a-3f2df0b6f9f1")
+		)
+		(fp_line
+			(start -0.975 -2.45)
+			(end 1.95 -2.45)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "e910d817-6bb2-4db1-9594-220fa812b939")
+		)
+		(fp_line
+			(start 1.95 -2.45)
+			(end 1.95 2.45)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "825b46be-cc09-4e8f-a921-b172f1e26939")
+		)
+		(fp_line
+			(start 1.95 2.45)
+			(end -1.95 2.45)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "4a47f5cd-d113-48aa-9bd7-3c296474f84a")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "c6253b2e-7190-4ce6-ae8c-048d8fa17196")
+			(effects
+				(font
+					(size 0.98 0.98)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -2.475 -1.905)
+			(size 1.95 0.6)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 3 "VCC")
+			(pinfunction "VCC")
+			(pintype "power_in")
+			(uuid "8230064e-e75e-48a1-b419-706ceb384755")
+		)
+		(pad "2" smd roundrect
+			(at -2.475 -0.635)
+			(size 1.95 0.6)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 5 "LED_DIN")
+			(pinfunction "PA6")
+			(pintype "bidirectional")
+			(uuid "4a875ed6-500f-44d7-b127-3c7027351ef8")
+		)
+		(pad "3" smd roundrect
+			(at -2.475 0.635)
+			(size 1.95 0.6)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 19 "SSW")
+			(pinfunction "PA7")
+			(pintype "bidirectional")
+			(uuid "84ef87f1-8163-4cc8-8b60-65372eb2554e")
+		)
+		(pad "4" smd roundrect
+			(at -2.475 1.905)
+			(size 1.95 0.6)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 18 "unconnected-(U3-PA1-Pad4)")
+			(pinfunction "PA1")
+			(pintype "bidirectional+no_connect")
+			(uuid "635a4a71-a598-493d-8358-e3019a44bcab")
+		)
+		(pad "5" smd roundrect
+			(at 2.475 1.905)
+			(size 1.95 0.6)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 20 "~{CHRG}")
+			(pinfunction "PA2")
+			(pintype "bidirectional")
+			(uuid "e3e67fd6-92d2-46f3-af04-0b8e735d7483")
+		)
+		(pad "6" smd roundrect
+			(at 2.475 0.635)
+			(size 1.95 0.6)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 21 "UPDI")
+			(pinfunction "~{RESET}/PA0")
+			(pintype "bidirectional")
+			(uuid "e8b7c538-cd2f-44a1-91bc-246ec9fd319b")
+		)
+		(pad "7" smd roundrect
+			(at 2.475 -0.635)
+			(size 1.95 0.6)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 22 "~{STBY}")
+			(pinfunction "PA3")
+			(pintype "bidirectional")
+			(uuid "fb01566f-504f-4df3-808f-d9cd6c6c4563")
+		)
+		(pad "8" smd roundrect
+			(at 2.475 -1.905)
+			(size 1.95 0.6)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 4 "GND")
+			(pinfunction "GND")
+			(pintype "power_in")
+			(uuid "f79f6d38-d791-4d3d-850c-f5b67e0dd828")
+		)
+		(embedded_fonts no)
+		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(layer "F.Cu")
+		(uuid "ba916545-97f3-4a8e-add9-c7e08e4a1c2e")
+		(at 53.65 48.55)
+		(descr "5.0mm x 5.0mm Addressable RGB LED NeoPixel, https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf")
+		(tags "LED RGB NeoPixel PLCC-4 5050")
+		(property "Reference" "D2"
+			(at 0 -3.5 0)
+			(layer "F.SilkS")
+			(uuid "5f9db741-8ce5-4b77-b668-14db012982e8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "WS2812B"
+			(at 0 4 0)
+			(layer "F.Fab")
+			(uuid "e9815f4d-1537-4034-9030-7262b2217e11")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5e5929ea-9088-48e7-b5d5-e4083a3101e7")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ed70ef3d-92f8-4fab-961c-749570aa27db")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "LED*WS2812*PLCC*5.0x5.0mm*P3.2mm*")
+		(path "/eb84dcfa-e574-4079-ad6b-300540da449a")
+		(sheetname "/")
+		(sheetfile "IgnisV1.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start -3.5 -2.75)
+			(end -3.5 2.75)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "0b7f57c3-51c6-4b67-b11c-89f23a2b3ef4")
+		)
+		(fp_line
+			(start -3.5 -2.75)
+			(end 3.5 -2.75)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "68fa7b97-be73-4fd3-afd3-b9512a0ee028")
+		)
+		(fp_line
+			(start -3.5 2.75)
+			(end 3.05 2.75)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "fb2bf72d-dbfe-46de-81e0-2819173a03da")
+		)
+		(fp_line
+			(start -2.7 0.9)
+			(end -2.7 -0.9)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "9bf0664e-a764-4160-9f92-41cddd1ce812")
+		)
+		(fp_line
+			(start 2.7 0.9)
+			(end 2.7 -0.9)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "8e0a4cda-9d09-47fc-ba8d-075cdf078087")
+		)
+		(fp_line
+			(start 3.05 2.75)
+			(end 3.5 2.3)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "e1b09666-28f8-4787-82ec-2b78be0ea240")
+		)
+		(fp_line
+			(start 3.5 2.3)
+			(end 3.5 -2.75)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "61301a11-b2d4-4b10-a3c8-419b8134d690")
+		)
+		(fp_line
+			(start -3.45 -2.75)
+			(end -3.45 2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "85309608-d605-448a-84da-0649de082e72")
+		)
+		(fp_line
+			(start -3.45 2.75)
+			(end 3.45 2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "fe392366-a46b-4b15-b3c8-a1489f5f4ceb")
+		)
+		(fp_line
+			(start 3.45 -2.75)
+			(end -3.45 -2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "445ac0af-5310-4a7d-8d95-522cab31f2f9")
+		)
+		(fp_line
+			(start 3.45 2.75)
+			(end 3.45 -2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "c0f000e8-672c-4806-bbeb-8d098595279d")
+		)
+		(fp_line
+			(start -2.5 -2.5)
+			(end -2.5 2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "516291ee-950d-4e58-93e5-f8dbdfefda71")
+		)
+		(fp_line
+			(start -2.5 2.5)
+			(end 2.5 2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "9de9ab80-a100-4b34-a760-83b7027cb740")
+		)
+		(fp_line
+			(start 2.5 -2.5)
+			(end -2.5 -2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "4842bed7-d308-45ba-9549-f1ac7c06cdb3")
+		)
+		(fp_line
+			(start 2.5 1.5)
+			(end 1.5 2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "9f21a144-1816-47f8-a96a-08cf80b4c3f2")
+		)
+		(fp_line
+			(start 2.5 2.5)
+			(end 2.5 -2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "9e2caae0-5c26-4c44-ae2d-b1e8f0288be2")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 0 -2)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "0da1f2fb-be7c-4d93-8cea-63a3545f7422")
+		)
+		(fp_text user "1"
+			(at -4 -1.6 0)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "abe38ef4-d029-44be-b051-d9a65973357a")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "a14d5b5e-3aa7-4fe8-8505-6dd3657ff895")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -2.45 -1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 3 "VCC")
+			(pinfunction "VDD")
+			(pintype "power_in")
+			(uuid "45fe1258-1172-40ce-b99f-2fa49846c632")
+		)
+		(pad "2" smd roundrect
+			(at -2.45 1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 6 "Net-(D2-DOUT)")
+			(pinfunction "DOUT")
+			(pintype "output")
+			(uuid "cab6a485-ecf3-45d9-94c1-cf91b4881774")
+		)
+		(pad "3" smd roundrect
+			(at 2.45 1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 4 "GND")
+			(pinfunction "VSS")
+			(pintype "power_in")
+			(uuid "471a5982-dadb-43b8-8e84-f437582470aa")
+		)
+		(pad "4" smd roundrect
+			(at 2.45 -1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 5 "LED_DIN")
+			(pinfunction "DIN")
+			(pintype "input")
+			(uuid "ac065981-ddec-4b73-b943-c32c66a8fd66")
+		)
+		(embedded_fonts no)
+		(model "${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(layer "F.Cu")
+		(uuid "bf89c267-1caa-4eff-b2ce-d37353475398")
+		(at 53.65 55.17)
+		(descr "5.0mm x 5.0mm Addressable RGB LED NeoPixel, https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf")
+		(tags "LED RGB NeoPixel PLCC-4 5050")
+		(property "Reference" "D3"
+			(at 0 -3.5 0)
+			(layer "F.SilkS")
+			(uuid "29202e4b-c7d4-4d0b-acd8-6ef6823201c9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "WS2812B"
+			(at 0 4 0)
+			(layer "F.Fab")
+			(uuid "61dcde29-7049-4613-87c4-c91927b36bed")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "86e63074-863d-44ea-bc67-fa261730fa01")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "aaacf08f-8460-47fd-bbab-0c4b1156f71b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "LED*WS2812*PLCC*5.0x5.0mm*P3.2mm*")
+		(path "/4aa4b149-25d5-4d37-8b54-9b8b866dc7e3")
+		(sheetname "/")
+		(sheetfile "IgnisV1.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start -3.5 -2.75)
+			(end -3.5 2.75)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "02351ce7-d2af-4d11-9f4f-268eb8ddc8a8")
+		)
+		(fp_line
+			(start -3.5 -2.75)
+			(end 3.5 -2.75)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "51ae2562-a3c6-40ea-9a6a-66525a451ce4")
+		)
+		(fp_line
+			(start -3.5 2.75)
+			(end 3.05 2.75)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "fd6e57f1-0885-464e-901b-4a7d43e1287a")
+		)
+		(fp_line
+			(start -2.7 0.9)
+			(end -2.7 -0.9)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "dbd96d0a-ef74-4419-9758-85363b81abbd")
+		)
+		(fp_line
+			(start 2.7 0.9)
+			(end 2.7 -0.9)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "48c20d8d-f2ad-497b-9046-e4cfe7606b76")
+		)
+		(fp_line
+			(start 3.05 2.75)
+			(end 3.5 2.3)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "1fc29116-ca47-46f3-b913-702d7b21f8b5")
+		)
+		(fp_line
+			(start 3.5 2.3)
+			(end 3.5 -2.75)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "bc3cfec6-b0b2-4d76-a7ae-53e0e002a62b")
+		)
+		(fp_line
+			(start -3.45 -2.75)
+			(end -3.45 2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "6d580735-697a-4f33-b2f8-c5e1bd70f6b8")
+		)
+		(fp_line
+			(start -3.45 2.75)
+			(end 3.45 2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "326856c7-8ac2-486b-8cc4-54a6bc2f6f38")
+		)
+		(fp_line
+			(start 3.45 -2.75)
+			(end -3.45 -2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "407a3e8c-2bb4-45ae-a519-5d4d9bfd2b39")
+		)
+		(fp_line
+			(start 3.45 2.75)
+			(end 3.45 -2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "8b27f016-0c73-41d7-b4fa-e23c43fe9817")
+		)
+		(fp_line
+			(start -2.5 -2.5)
+			(end -2.5 2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "2fd32d7b-ae36-4f1a-89ba-f65fc07ce20a")
+		)
+		(fp_line
+			(start -2.5 2.5)
+			(end 2.5 2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "4860f83a-e2c1-48ef-bbff-590682a228db")
+		)
+		(fp_line
+			(start 2.5 -2.5)
+			(end -2.5 -2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "57a8d881-2731-4d59-86ab-db94abd4c42b")
+		)
+		(fp_line
+			(start 2.5 1.5)
+			(end 1.5 2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "897958b1-7c51-4a03-a7b4-68703a7ce9d5")
+		)
+		(fp_line
+			(start 2.5 2.5)
+			(end 2.5 -2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "5ae887e5-f3af-41d3-a5bc-410ea50e9abe")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 0 -2)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "1c5185f0-b4d1-4e8b-9ae7-096f336692c0")
+		)
+		(fp_text user "1"
+			(at -4 -1.6 0)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "8720b67e-1473-432e-9a6d-657a1b8560de")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "fe5eae92-8a9b-42e6-ae85-7cc5e7f517c8")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -2.45 -1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 3 "VCC")
+			(pinfunction "VDD")
+			(pintype "power_in")
+			(uuid "b4b4f04a-b320-4f2a-9596-6ef0928d8068")
+		)
+		(pad "2" smd roundrect
+			(at -2.45 1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 7 "Net-(D3-DOUT)")
+			(pinfunction "DOUT")
+			(pintype "output")
+			(uuid "5bf7a3b0-9f87-490d-8e46-579d51261ca8")
+		)
+		(pad "3" smd roundrect
+			(at 2.45 1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 4 "GND")
+			(pinfunction "VSS")
+			(pintype "power_in")
+			(uuid "6d6001e6-a14b-4999-80a1-f4ff82068f9b")
+		)
+		(pad "4" smd roundrect
+			(at 2.45 -1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 6 "Net-(D2-DOUT)")
+			(pinfunction "DIN")
+			(pintype "input")
+			(uuid "087da642-894f-43bc-9687-938f8b510acc")
+		)
+		(embedded_fonts no)
+		(model "${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(layer "F.Cu")
+		(uuid "caacd4e9-22b7-4d0a-b828-9e23ba91ce2a")
+		(at 53.65 81.65)
+		(descr "5.0mm x 5.0mm Addressable RGB LED NeoPixel, https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf")
+		(tags "LED RGB NeoPixel PLCC-4 5050")
+		(property "Reference" "D8"
+			(at 0 -3.5 0)
+			(layer "F.SilkS")
+			(uuid "c001676e-c478-427a-acea-c890ad856fc8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "WS2812B"
+			(at 0 4 0)
+			(layer "F.Fab")
+			(uuid "71ce2628-446b-49fe-82ce-5106ce90f789")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "70f19143-e276-4bf0-b894-d695c77e3da2")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "69c27214-2f55-4bfb-a821-f54ea685f524")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "LED*WS2812*PLCC*5.0x5.0mm*P3.2mm*")
+		(path "/a10bc042-d03c-4072-8389-aeeffaaa2708")
+		(sheetname "/")
+		(sheetfile "IgnisV1.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start -3.5 -2.75)
+			(end -3.5 2.75)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "e90f5856-382f-4cd4-9050-3f6ea8b879ff")
+		)
+		(fp_line
+			(start -3.5 -2.75)
+			(end 3.5 -2.75)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "ed35c0fe-fe97-4f8e-887c-ce3f96ea1001")
+		)
+		(fp_line
+			(start -3.5 2.75)
+			(end 3.05 2.75)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "dc2c4907-af40-4ebc-a835-a9c36662c602")
+		)
+		(fp_line
+			(start -2.7 0.9)
+			(end -2.7 -0.9)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "572ff51b-55c0-4a9e-b669-096d11d89a42")
+		)
+		(fp_line
+			(start 2.7 0.9)
+			(end 2.7 -0.9)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "ac13a51c-c472-4c91-9150-81aca251bbea")
+		)
+		(fp_line
+			(start 3.05 2.75)
+			(end 3.5 2.3)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "b2db68ef-d43a-4ce4-b965-ec207b03b9c2")
+		)
+		(fp_line
+			(start 3.5 2.3)
+			(end 3.5 -2.75)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "4c14fc05-3616-44f4-be92-faa88ade81df")
+		)
+		(fp_line
+			(start -3.45 -2.75)
+			(end -3.45 2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "b833d2a2-b36f-4e57-b993-466b92d2307b")
+		)
+		(fp_line
+			(start -3.45 2.75)
+			(end 3.45 2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "24b00b07-07c4-4a8a-b598-bb4fbf5fda67")
+		)
+		(fp_line
+			(start 3.45 -2.75)
+			(end -3.45 -2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "c91932ce-3b29-4241-a822-6e9c3f37dc6a")
+		)
+		(fp_line
+			(start 3.45 2.75)
+			(end 3.45 -2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "183eef4f-4dba-4543-ac61-0f6fd2ae5bf2")
+		)
+		(fp_line
+			(start -2.5 -2.5)
+			(end -2.5 2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "71696bef-bb04-4d7f-a94f-6761be24725c")
+		)
+		(fp_line
+			(start -2.5 2.5)
+			(end 2.5 2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "07812043-55ff-4168-a685-9abb98be69fa")
+		)
+		(fp_line
+			(start 2.5 -2.5)
+			(end -2.5 -2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "1adbf393-4284-4e29-a900-219cd2a586b8")
+		)
+		(fp_line
+			(start 2.5 1.5)
+			(end 1.5 2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "a2251f62-8eda-4681-8bee-c535e1e733f2")
+		)
+		(fp_line
+			(start 2.5 2.5)
+			(end 2.5 -2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "bdafa74f-9341-4db9-9bbe-639790b3e91c")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 0 -2)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "9698a93a-205d-403c-847e-0186d21a1c84")
+		)
+		(fp_text user "1"
+			(at -4 -1.6 0)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "839be3fe-ff45-46eb-b0d9-5f133841e965")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "fb589b3a-383d-46ac-a6f1-1548b421786f")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -2.45 -1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 3 "VCC")
+			(pinfunction "VDD")
+			(pintype "power_in")
+			(uuid "fa0ac5db-3fbe-44d3-bf7a-b4425753ae53")
+		)
+		(pad "2" smd roundrect
+			(at -2.45 1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 13 "Net-(D7-DIN)")
+			(pinfunction "DOUT")
+			(pintype "output")
+			(uuid "54057153-b748-46bb-a2b8-562bd9dc11c3")
+		)
+		(pad "3" smd roundrect
+			(at 2.45 1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 4 "GND")
+			(pinfunction "VSS")
+			(pintype "power_in")
+			(uuid "4bb1eed4-0167-44ba-83e3-595f2af0e707")
+		)
+		(pad "4" smd roundrect
+			(at 2.45 -1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 8 "Net-(D4-DOUT)")
+			(pinfunction "DIN")
+			(pintype "input")
+			(uuid "11571509-9ec8-4e8f-be01-0da30dc7346e")
+		)
+		(embedded_fonts no)
+		(model "${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(layer "F.Cu")
+		(uuid "cd3927bc-eefc-4073-b79c-562bdee8a5f0")
+		(at 53.65 61.79)
+		(descr "5.0mm x 5.0mm Addressable RGB LED NeoPixel, https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf")
+		(tags "LED RGB NeoPixel PLCC-4 5050")
+		(property "Reference" "D4"
+			(at 0 -3.5 0)
+			(layer "F.SilkS")
+			(uuid "4c8ff7ff-3d89-404d-a675-2ee21f7a0444")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "WS2812B"
+			(at 0 4 0)
+			(layer "F.Fab")
+			(uuid "1b92479c-d173-4588-a711-9ec9fb2d1498")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a7fd6413-e525-445c-b18b-001d6d0e1a8f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f412939e-22ab-4d2d-b948-eca548a07291")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "LED*WS2812*PLCC*5.0x5.0mm*P3.2mm*")
+		(path "/29895892-5812-4fbb-97ca-cef336c86958")
+		(sheetname "/")
+		(sheetfile "IgnisV1.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start -3.5 -2.75)
+			(end -3.5 2.75)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "c5a128f0-2390-4e73-ba50-203da8edd44c")
+		)
+		(fp_line
+			(start -3.5 -2.75)
+			(end 3.5 -2.75)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "a5db5f3c-54b2-4418-8bdf-3882fbcafb40")
+		)
+		(fp_line
+			(start -3.5 2.75)
+			(end 3.05 2.75)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "75353b97-90a4-4f5f-b029-98a49481fcdd")
+		)
+		(fp_line
+			(start -2.7 0.9)
+			(end -2.7 -0.9)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "ce1f6e78-73cf-47cb-8549-4731015b43ab")
+		)
+		(fp_line
+			(start 2.7 0.9)
+			(end 2.7 -0.9)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "e7817751-4ab9-4f47-8678-ba89ef034975")
+		)
+		(fp_line
+			(start 3.05 2.75)
+			(end 3.5 2.3)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "030d856c-2ef4-4b36-96b5-6ab14fb74275")
+		)
+		(fp_line
+			(start 3.5 2.3)
+			(end 3.5 -2.75)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "119ee7d6-beac-4da0-894e-e16d19b7d79b")
+		)
+		(fp_line
+			(start -3.45 -2.75)
+			(end -3.45 2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "fcec5555-cb3a-403f-96be-4cc01c18e22b")
+		)
+		(fp_line
+			(start -3.45 2.75)
+			(end 3.45 2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "a56cc43e-eb33-41f1-b958-8a7b19fa430b")
+		)
+		(fp_line
+			(start 3.45 -2.75)
+			(end -3.45 -2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "b865e89f-5b68-48d8-bb46-1bf4447d4c81")
+		)
+		(fp_line
+			(start 3.45 2.75)
+			(end 3.45 -2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "32e84a26-3948-49fe-b3cb-5db3b5a7e82a")
+		)
+		(fp_line
+			(start -2.5 -2.5)
+			(end -2.5 2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "39a4532d-f7d9-4041-a967-509393823055")
+		)
+		(fp_line
+			(start -2.5 2.5)
+			(end 2.5 2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "4f04cd42-9d04-46f1-9980-12f3541b8fb8")
+		)
+		(fp_line
+			(start 2.5 -2.5)
+			(end -2.5 -2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "3cf343db-1eef-47ad-a22f-d0b21aad7f2d")
+		)
+		(fp_line
+			(start 2.5 1.5)
+			(end 1.5 2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "6fd4a1e4-30bd-4423-9413-f6df05a776bc")
+		)
+		(fp_line
+			(start 2.5 2.5)
+			(end 2.5 -2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "6deb305a-49bf-4332-bc51-1ad3f76aeac3")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 0 -2)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "ab3f1c3e-720d-4e30-b19f-a16082cc426c")
+		)
+		(fp_text user "1"
+			(at -4 -1.6 0)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "0794628c-a441-4532-b279-2d6de84b3abe")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "dced9451-de84-4a64-8370-b2c378cc9ce1")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -2.45 -1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 3 "VCC")
+			(pinfunction "VDD")
+			(pintype "power_in")
+			(uuid "59f86dba-132e-45e1-9d10-bd9514daded9")
+		)
+		(pad "2" smd roundrect
+			(at -2.45 1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 8 "Net-(D4-DOUT)")
+			(pinfunction "DOUT")
+			(pintype "output")
+			(uuid "8fe66255-319b-4103-be65-757370bc7f02")
+		)
+		(pad "3" smd roundrect
+			(at 2.45 1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 4 "GND")
+			(pinfunction "VSS")
+			(pintype "power_in")
+			(uuid "5a51b2a7-40ae-4750-9020-e69d11072785")
+		)
+		(pad "4" smd roundrect
+			(at 2.45 -1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 7 "Net-(D3-DOUT)")
+			(pinfunction "DIN")
+			(pintype "input")
+			(uuid "4be056ce-180b-450f-ae5a-b332617328a0")
+		)
+		(embedded_fonts no)
+		(model "${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+		(layer "F.Cu")
+		(uuid "ed516cc9-abe5-4970-a4ec-d22a84377b66")
+		(at 53.65 68.41)
+		(descr "5.0mm x 5.0mm Addressable RGB LED NeoPixel, https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf")
+		(tags "LED RGB NeoPixel PLCC-4 5050")
+		(property "Reference" "D6"
+			(at 0 -3.5 0)
+			(layer "F.SilkS")
+			(uuid "7240677e-a926-4b5b-98ed-7896fcc0dc62")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "WS2812B"
+			(at 0 4 0)
+			(layer "F.Fab")
+			(uuid "0c2335fe-2989-4ff9-82c8-e5fe2b34c20f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "aff490a8-c473-4157-bce5-720f6830ef74")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "44293c13-5354-400a-a4c3-a019dc7c3b41")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "LED*WS2812*PLCC*5.0x5.0mm*P3.2mm*")
+		(path "/67248451-cea6-47e6-835c-41352832105c")
+		(sheetname "/")
+		(sheetfile "IgnisV1.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start -3.5 -2.75)
+			(end -3.5 2.75)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "6154e6ca-03ce-49e4-9703-a4d4b349bead")
+		)
+		(fp_line
+			(start -3.5 -2.75)
+			(end 3.5 -2.75)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "ab7c211d-7202-4913-a3ad-a58eb1e63903")
+		)
+		(fp_line
+			(start -3.5 2.75)
+			(end 3.05 2.75)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "40a553fb-b3db-4bbf-aa45-aefbb1c3fa79")
+		)
+		(fp_line
+			(start -2.7 0.9)
+			(end -2.7 -0.9)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "ed871b85-26b4-42fd-bcb7-ad0088ddfd78")
+		)
+		(fp_line
+			(start 2.7 0.9)
+			(end 2.7 -0.9)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "28e4b7e8-9f53-4c14-ace5-27d312d5ed35")
+		)
+		(fp_line
+			(start 3.05 2.75)
+			(end 3.5 2.3)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "35207be2-24ba-4ea8-b287-6dcf950021f5")
+		)
+		(fp_line
+			(start 3.5 2.3)
+			(end 3.5 -2.75)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "0a29c5a2-dabc-4afd-ac9a-c69e2cb59781")
+		)
+		(fp_line
+			(start -3.45 -2.75)
+			(end -3.45 2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "d5a62f4c-49a7-4bbe-ae8b-89c232d7bbfe")
+		)
+		(fp_line
+			(start -3.45 2.75)
+			(end 3.45 2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "41c6a5ff-f055-4f67-9e58-5755b745fd8d")
+		)
+		(fp_line
+			(start 3.45 -2.75)
+			(end -3.45 -2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "c711722c-3a69-431e-9600-f1294a3b5791")
+		)
+		(fp_line
+			(start 3.45 2.75)
+			(end 3.45 -2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "cbe534d4-8613-4326-bb98-13bd4a351181")
+		)
+		(fp_line
+			(start -2.5 -2.5)
+			(end -2.5 2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "bd4b7296-8e05-4df7-930a-957ebb13ea64")
+		)
+		(fp_line
+			(start -2.5 2.5)
+			(end 2.5 2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "9e05b01a-38bb-4904-a3fe-bb499b12830e")
+		)
+		(fp_line
+			(start 2.5 -2.5)
+			(end -2.5 -2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "633b3014-3ced-4fb7-b485-133d80005a23")
+		)
+		(fp_line
+			(start 2.5 1.5)
+			(end 1.5 2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "a17656d8-da59-4df6-bff8-92ac31c14fc2")
+		)
+		(fp_line
+			(start 2.5 2.5)
+			(end 2.5 -2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "dc2c7e7c-33b4-43d3-a6a7-4a9cfcef03e2")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 0 -2)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "9e13df03-0c2b-4bff-a87a-d94e95989ae2")
+		)
+		(fp_text user "1"
+			(at -4 -1.6 0)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "ffc8bd86-d17d-4e33-891b-49900aff037b")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "e72d6159-336a-4cbe-8e93-11ad91f1a61d")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -2.45 -1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 3 "VCC")
+			(pinfunction "VDD")
+			(pintype "power_in")
+			(uuid "28363184-c27c-4ab9-8add-ade309ad751d")
+		)
+		(pad "2" smd roundrect
+			(at -2.45 1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 12 "unconnected-(D6-DOUT-Pad2)")
+			(pinfunction "DOUT")
+			(pintype "output+no_connect")
+			(uuid "c270ceed-2bb2-4fcf-b93a-4c1ccb664115")
+		)
+		(pad "3" smd roundrect
+			(at 2.45 1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 4 "GND")
+			(pinfunction "VSS")
+			(pintype "power_in")
+			(uuid "aeb2395e-e6d3-4b25-b47a-18e0cda3dfbe")
+		)
+		(pad "4" smd roundrect
+			(at 2.45 -1.65)
+			(size 1.5 0.9)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.1)
+			(net 11 "Net-(D6-DIN)")
+			(pinfunction "DIN")
+			(pintype "input")
+			(uuid "98e778e6-5d64-4878-846a-ae8d12f4b121")
+		)
+		(embedded_fonts no)
+		(model "${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(embedded_fonts no)
+	(embedded_files
+		(file
+			(name "MOLEX-53048-0210.stp")
+			(type model)
+			(data |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|
+			)
+			(checksum "0680C8B83FBA55E80A733352AE275C2E")
+		)
+	)
+)
