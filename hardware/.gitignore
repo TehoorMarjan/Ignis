@@ -6,6 +6,7 @@
 **/*.bak
 **/*.bck
 **/*-backups/
+**/~*.lck
 
 # Fichiers de fabrication (à garder si nécessaire)
 # **/*.gbr
