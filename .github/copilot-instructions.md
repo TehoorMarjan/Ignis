@@ -35,6 +35,16 @@ Ce projet concerne le développement d'une lampe/veilleuse autonome "Lampe Ignis
 ## Convention de Commit
 
 - Tous les messages de commit doivent commencer par une emoji parlante, amusante ou sympa, si possible différente des précédents (éviter de réutiliser les deux dernières emoji utilisées, sauf si le contexte l'impose).
-- Le message doit décrire simplement les changements apportés, sans être exhaustif sur les détails mineurs pour ne pas surcharger la relecture. Privilégier un ton humain et synthétique (ex : « Nettoyage de la documentation » plutôt que lister chaque micro-changement).
+- Le message doit être rédigé **en anglais** pour assurer la cohérence du projet.
+- Le titre doit décrire simplement les changements apportés, sans être exhaustif sur les détails mineurs pour ne pas surcharger la relecture. Privilégier un ton humain et synthétique.
+- Pour les changements complexes, utiliser des **bullet points** dans le corps du message pour détailler les modifications de manière claire et organisée.
+- Exemple de format :
+  ```
+  🔧 Add component with footprint and 3D model
+  
+  - Created KiCAD footprint for new component
+  - Designed 3D model in FreeCAD
+  - Integrated STEP model into library
+  ```
 
 ✅ Clarify Project Requirements - Projet embarqué ATtiny212 avec LEDs WS2812B
