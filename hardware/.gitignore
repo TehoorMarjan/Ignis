@@ -7,6 +7,9 @@
 **/*.bck
 **/*-backups/
 **/~*.lck
+**/place_footprints.ini
+**/*.log
+**/out.svg
 
 # Fichiers de fabrication (à garder si nécessaire)
 # **/*.gbr
