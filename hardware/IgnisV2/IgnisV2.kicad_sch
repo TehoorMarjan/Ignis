@@ -1,0 +1,108 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "c0d27bc6-7cc3-4f73-8ef0-8760bb072409")
+	(paper "A4")
+	(lib_symbols)
+	(text "Ignis"
+		(exclude_from_sim no)
+		(at 25.654 20.066 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+			)
+		)
+		(uuid "d71fb224-0f11-4db3-825e-87a10c0181a2")
+	)
+	(sheet
+		(at 19.05 100.33)
+		(size 78.74 43.18)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5f9b8629-ad7f-4628-8ddf-c445521a1622")
+		(property "Sheetname" "Power Stage"
+			(at 19.05 99.6184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power_stage.kicad_sch"
+			(at 19.05 144.0946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "IgnisV2"
+				(path "/c0d27bc6-7cc3-4f73-8ef0-8760bb072409"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 111.76 100.33)
+		(size 78.74 43.18)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "facc229f-96b0-479f-a319-d364948dcb5f")
+		(property "Sheetname" "Function Stage"
+			(at 111.76 99.6184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "function_stage.kicad_sch"
+			(at 111.76 144.0946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "IgnisV2"
+				(path "/c0d27bc6-7cc3-4f73-8ef0-8760bb072409"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
