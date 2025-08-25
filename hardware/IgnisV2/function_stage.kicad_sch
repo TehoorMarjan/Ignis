@@ -1355,6 +1355,89 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Switch:SW_Push"
 			(pin_numbers
 				(hide yes)
@@ -1822,6 +1905,26 @@
 		)
 		(uuid "aa25cf32-d196-436c-a905-7a42319ddc10")
 	)
+	(text_box "Mechanical"
+		(exclude_from_sim no)
+		(at 13.97 142.24 0)
+		(size 132.08 53.34)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "f692b4b0-397a-494d-a3eb-2ce6c877a686")
+	)
 	(junction
 		(at 85.09 105.41)
 		(diameter 0)
@@ -1835,10 +1938,10 @@
 		(uuid "016e328c-9998-4a82-a5f3-9b3799331bdc")
 	)
 	(junction
-		(at 127 48.26)
+		(at 113.03 48.26)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "1fd03341-76d0-4c09-9f6b-59f5a9dc8287")
+		(uuid "3b0a69bd-0020-40b5-bd66-cdd4dd563a45")
 	)
 	(junction
 		(at 113.03 110.49)
@@ -1915,6 +2018,16 @@
 	(no_connect
 		(at 265.43 48.26)
 		(uuid "0ef74bbc-df40-4d3c-b419-1307f1fe6061")
+	)
+	(wire
+		(pts
+			(xy 41.91 39.37) (xy 55.88 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "046bdad7-615b-4ead-847d-9f41b9af2ff7")
 	)
 	(wire
 		(pts
@@ -2068,13 +2181,13 @@
 	)
 	(wire
 		(pts
-			(xy 127 48.26) (xy 128.27 48.26)
+			(xy 41.91 44.45) (xy 41.91 45.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3eddd40b-23f6-4ad2-9ef4-c5b83e925aaa")
+		(uuid "383bba51-af8d-4c11-920a-a97f4e33f907")
 	)
 	(wire
 		(pts
@@ -2158,7 +2271,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 48.26) (xy 115.57 48.26)
+			(xy 107.95 48.26) (xy 113.03 48.26)
 		)
 		(stroke
 			(width 0)
@@ -2438,6 +2551,16 @@
 	)
 	(wire
 		(pts
+			(xy 113.03 60.96) (xy 113.03 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "add24457-c9e3-4693-8dd1-0649cbbc9da9")
+	)
+	(wire
+		(pts
 			(xy 69.85 113.03) (xy 73.66 113.03)
 		)
 		(stroke
@@ -2445,6 +2568,16 @@
 			(type default)
 		)
 		(uuid "b37ad0ad-a521-4870-a2ec-b889cb93474f")
+	)
+	(wire
+		(pts
+			(xy 113.03 48.26) (xy 115.57 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4fe4f0c-e3f7-4844-8f5d-e7ecaf3c2cef")
 	)
 	(wire
 		(pts
@@ -2508,23 +2641,13 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 40.64) (xy 55.88 40.64)
+			(xy 41.91 34.29) (xy 55.88 34.29)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "be29f563-0a03-40ae-a6fd-9bca1e519da9")
-	)
-	(wire
-		(pts
-			(xy 127 63.5) (xy 127 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c3bff0e1-d92f-43c5-96b2-00e2188964f3")
 	)
 	(wire
 		(pts
@@ -2608,7 +2731,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 48.26) (xy 127 48.26)
+			(xy 123.19 48.26) (xy 128.27 48.26)
 		)
 		(stroke
 			(width 0)
@@ -2665,6 +2788,16 @@
 			(type default)
 		)
 		(uuid "ef2504ee-9945-435a-8d24-040d97f289dd")
+	)
+	(wire
+		(pts
+			(xy 55.88 44.45) (xy 41.91 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0d5810f-2cec-4810-b21b-35feba5b46c8")
 	)
 	(wire
 		(pts
@@ -2728,7 +2861,7 @@
 			)
 		)
 	)
-	(global_label "~{STBY}"
+	(global_label "~{PGOOD}"
 		(shape input)
 		(at 116.84 110.49 0)
 		(fields_autoplaced yes)
@@ -2818,7 +2951,7 @@
 	)
 	(global_label "UPDI"
 		(shape bidirectional)
-		(at 41.91 40.64 180)
+		(at 41.91 34.29 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2828,7 +2961,7 @@
 		)
 		(uuid "ae529c6d-bc27-4d76-99f8-00541bdbc322")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 34.4495 40.64 0)
+			(at 34.4495 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2882,6 +3015,28 @@
 			)
 		)
 	)
+	(global_label "VSYS"
+		(shape input)
+		(at 41.91 39.37 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e0bf7543-e5bf-48ac-82cc-3a4de6f43e58")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 34.3286 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "~{IND}"
 		(shape input)
 		(at 88.9 105.41 0)
@@ -2901,6 +3056,88 @@
 				)
 				(justify left)
 				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 60.96 44.45 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "110f1825-5bc7-47c2-b206-71b0c501dd5e")
+		(property "Reference" "J6"
+			(at 63.754 41.148 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 63.754 43.688 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 60.96 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 60.96 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 60.96 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MaxVoltage" ""
+			(at 60.96 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Designator" ""
+			(at 60.96 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "65bedf2c-d9d9-4354-9312-06af89d5438a")
+		)
+		(instances
+			(project "IgnisV2"
+				(path "/c0d27bc6-7cc3-4f73-8ef0-8760bb072409/facc229f-96b0-479f-a319-d364948dcb5f"
+					(reference "J6")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -3311,6 +3548,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 24.13 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2cb764ae-a8ae-47ac-b497-96bcd0a959a2")
+		(property "Reference" "H1"
+			(at 26.67 156.2099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ToolingHole"
+			(at 26.67 158.7499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:ToolingHole_1.152mm"
+			(at 24.13 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 24.13 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 24.13 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/c0d27bc6-7cc3-4f73-8ef0-8760bb072409/facc229f-96b0-479f-a319-d364948dcb5f"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 185.42 55.88 0)
 		(unit 1)
@@ -3697,32 +3998,31 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x01_Pin")
-		(at 60.96 40.64 180)
+		(at 60.96 34.29 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "43c27b6e-44b8-4d70-8ac7-b135b777be4f")
 		(property "Reference" "J4"
-			(at 60.325 35.56 0)
+			(at 63.754 30.988 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "Conn_01x01_Pin"
-			(at 60.325 38.1 0)
+		(property "Value" "UPDI"
+			(at 63.754 33.528 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Connector_Wire:SolderWire-0.5sqmm_1x01_D0.9mm_OD2.1mm"
-			(at 60.96 40.64 0)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 60.96 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3731,7 +4031,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 60.96 40.64 0)
+			(at 60.96 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3740,7 +4040,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated"
-			(at 60.96 40.64 0)
+			(at 60.96 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3749,7 +4049,7 @@
 			)
 		)
 		(property "MaxVoltage" ""
-			(at 60.96 40.64 0)
+			(at 60.96 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3758,7 +4058,7 @@
 			)
 		)
 		(property "Designator" ""
-			(at 60.96 40.64 0)
+			(at 60.96 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4024,6 +4324,88 @@
 			(project "IgnisV2"
 				(path "/c0d27bc6-7cc3-4f73-8ef0-8760bb072409/facc229f-96b0-479f-a319-d364948dcb5f"
 					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 60.96 39.37 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "4b13dd3e-1960-4197-a5e5-8447ce9c3d79")
+		(property "Reference" "J5"
+			(at 63.754 36.068 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VSYS"
+			(at 63.754 38.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 60.96 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 60.96 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 60.96 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MaxVoltage" ""
+			(at 60.96 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Designator" ""
+			(at 60.96 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "54120e9d-9772-4e30-86cb-e27ef8598e95")
+		)
+		(instances
+			(project "IgnisV2"
+				(path "/c0d27bc6-7cc3-4f73-8ef0-8760bb072409/facc229f-96b0-479f-a319-d364948dcb5f"
+					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -4422,6 +4804,70 @@
 			(project "IgnisV2"
 				(path "/c0d27bc6-7cc3-4f73-8ef0-8760bb072409/facc229f-96b0-479f-a319-d364948dcb5f"
 					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 24.13 170.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "56044b11-8933-47f6-a399-4054c67124b4")
+		(property "Reference" "H3"
+			(at 26.67 168.9099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ToolingHole"
+			(at 26.67 171.4499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:ToolingHole_1.152mm"
+			(at 24.13 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 24.13 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 24.13 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/c0d27bc6-7cc3-4f73-8ef0-8760bb072409/facc229f-96b0-479f-a319-d364948dcb5f"
+					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -6242,6 +6688,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 41.91 45.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ab44eeca-28d2-47a8-a74a-40c196157742")
+		(property "Reference" "#PWR02"
+			(at 41.91 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 41.91 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 41.91 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 41.91 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 41.91 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6b804d7a-bb0e-4807-a509-3bfb3de86578")
+		)
+		(instances
+			(project "IgnisV2"
+				(path "/c0d27bc6-7cc3-4f73-8ef0-8760bb072409/facc229f-96b0-479f-a319-d364948dcb5f"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Switch:SW_Push")
 		(at 186.69 105.41 0)
 		(unit 1)
@@ -6329,7 +6841,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Flag")
-		(at 127 63.5 180)
+		(at 113.03 60.96 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -6337,7 +6849,7 @@
 		(dnp no)
 		(uuid "bd58701c-756d-4eb3-a580-677d4fb51c08")
 		(property "Reference" "TP12"
-			(at 128.27 63.6269 0)
+			(at 114.3 61.0869 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6346,7 +6858,7 @@
 			)
 		)
 		(property "Value" "LED_DIN"
-			(at 128.27 66.1669 0)
+			(at 114.3 63.6269 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6355,7 +6867,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 121.92 63.5 0)
+			(at 107.95 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6364,7 +6876,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 121.92 63.5 0)
+			(at 107.95 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6373,7 +6885,7 @@
 			)
 		)
 		(property "Description" "test point (alternative flag-style design)"
-			(at 127 63.5 0)
+			(at 113.03 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6382,7 +6894,7 @@
 			)
 		)
 		(property "MaxVoltage" ""
-			(at 127 63.5 0)
+			(at 113.03 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6391,7 +6903,7 @@
 			)
 		)
 		(property "Designator" "Test Pad"
-			(at 127 63.5 0)
+			(at 113.03 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7375,6 +7887,70 @@
 			(project "IgnisV2"
 				(path "/c0d27bc6-7cc3-4f73-8ef0-8760bb072409/facc229f-96b0-479f-a319-d364948dcb5f"
 					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 24.13 163.83 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ee093ed0-18b6-4b20-be7a-f5012112a6c4")
+		(property "Reference" "H2"
+			(at 26.67 162.5599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ToolingHole"
+			(at 26.67 165.0999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:ToolingHole_1.152mm"
+			(at 24.13 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 24.13 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 24.13 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/c0d27bc6-7cc3-4f73-8ef0-8760bb072409/facc229f-96b0-479f-a319-d364948dcb5f"
+					(reference "H2")
 					(unit 1)
 				)
 			)

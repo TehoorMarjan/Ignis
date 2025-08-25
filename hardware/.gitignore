@@ -10,6 +10,7 @@
 **/place_footprints.ini
 **/*.log
 **/out.svg
+**/production/backups/*.zip
 
 # Fichiers de fabrication (à garder si nécessaire)
 # **/*.gbr

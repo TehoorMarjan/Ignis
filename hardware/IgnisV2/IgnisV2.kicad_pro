@@ -41,18 +41,29 @@
           "height": 1.27,
           "width": 2.54
         },
-        "silk_line_width": 0.1,
+        "silk_line_width": 0.153,
         "silk_text_italic": false,
         "silk_text_size_h": 1.0,
         "silk_text_size_v": 1.0,
-        "silk_text_thickness": 0.1,
+        "silk_text_thickness": 0.153,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.1
         }
       },
-      "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
+      "drc_exclusions": [
+        [
+          "lib_footprint_mismatch|28950000|49600000|04b39ae5-b67f-42ff-949e-89bfcd44a18e|00000000-0000-0000-0000-000000000000",
+          "Okay, on purpose"
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -117,23 +128,23 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.1,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.5,
+        "min_copper_edge_clearance": 0.2,
         "min_groove_width": 0.0,
         "min_hole_clearance": 0.25,
-        "min_hole_to_hole": 0.25,
-        "min_microvia_diameter": 0.2,
-        "min_microvia_drill": 0.1,
-        "min_resolved_spokes": 2,
-        "min_silk_clearance": 0.0,
-        "min_text_height": 0.8,
-        "min_text_thickness": 0.08,
-        "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.0,
-        "min_via_annular_width": 0.1,
-        "min_via_diameter": 0.5,
-        "solder_mask_to_copper_clearance": 0.0,
+        "min_hole_to_hole": 0.2,
+        "min_microvia_diameter": 0.25,
+        "min_microvia_drill": 0.15,
+        "min_resolved_spokes": 1,
+        "min_silk_clearance": 0.1,
+        "min_text_height": 1.0,
+        "min_text_thickness": 0.153,
+        "min_through_hole_diameter": 0.15,
+        "min_track_width": 0.09,
+        "min_via_annular_width": 0.05,
+        "min_via_diameter": 0.25,
+        "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
@@ -180,7 +191,11 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.2,
+        0.5
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -207,7 +222,20 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        },
+        {
+          "diameter": 0.25,
+          "drill": 0.15
+        },
+        {
+          "diameter": 0.5,
+          "drill": 0.2
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -226,7 +254,40 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "footprint_link_issues|1358900|482600|eb84dcfa-e574-4079-ad6b-300540da449a|00000000-0000-0000-0000-000000000000|||",
+        "Used WS2812B, pin-compatible"
+      ],
+      [
+        "footprint_link_issues|1600200|482600|4aa4b149-25d5-4d37-8b54-9b8b866dc7e3|00000000-0000-0000-0000-000000000000|||",
+        "Used WS2812B, pin-compatible"
+      ],
+      [
+        "footprint_link_issues|1854200|482600|948ac4c2-1e65-48a6-b152-f7ca1efa76ef|00000000-0000-0000-0000-000000000000|||",
+        "Used WS2812B, pin-compatible"
+      ],
+      [
+        "footprint_link_issues|2095500|482600|7ab6dd98-7afc-43f5-a7fa-0b2b015c88ce|00000000-0000-0000-0000-000000000000|||",
+        "Used WS2812B, pin-compatible"
+      ],
+      [
+        "footprint_link_issues|2336800|482600|66c957d7-51cc-4f96-ab57-d82720582398|00000000-0000-0000-0000-000000000000|||",
+        "Used WS2812B, pin-compatible"
+      ],
+      [
+        "footprint_link_issues|2578100|482600|5d62c27d-ac0d-4e9e-8aef-5620de4304fa|00000000-0000-0000-0000-000000000000|||",
+        "Used WS2812B, pin-compatible"
+      ],
+      [
+        "lib_symbol_mismatch|825500|1828800|85488ac5-ffe8-477b-ab1e-789196152b11|00000000-0000-0000-0000-000000000000|||",
+        "Edited to include project-specific names"
+      ],
+      [
+        "power_pin_not_driven|2184400|863600|db68726a-b173-4a26-bdea-b1dd02f9b0f4|00000000-0000-0000-0000-000000000000|/c0d27bc6-7cc3-4f73-8ef0-8760bb072409/5f9b8629-ad7f-4628-8ddf-c445521a1622|/c0d27bc6-7cc3-4f73-8ef0-8760bb072409/5f9b8629-ad7f-4628-8ddf-c445521a1622|",
+        "Schematic is OK, no idea how to fix the error from a DRC point of view (not from a functional point of view)"
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -411,7 +472,7 @@
       "duplicate_sheet_names": "error",
       "endpoint_off_grid": "warning",
       "extra_units": "error",
-      "footprint_filter": "ignore",
+      "footprint_filter": "warning",
       "footprint_link_issues": "warning",
       "four_way_junction": "ignore",
       "global_label_dangling": "warning",
@@ -430,14 +491,14 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
       "simulation_model_issue": "ignore",
-      "single_global_label": "ignore",
+      "single_global_label": "warning",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
       "undefined_netclass": "error",
@@ -462,21 +523,38 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.1,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
+        "microvia_diameter": 0.25,
+        "microvia_drill": 0.15,
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.2,
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
+        "via_diameter": 0.25,
+        "via_drill": 0.15,
         "wire_width": 6
+      },
+      {
+        "bus_width": 16,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.5,
+        "diff_pair_width": 0.5,
+        "line_style": 0,
+        "microvia_diameter": 0.5,
+        "microvia_drill": 0.2,
+        "name": "Heavy",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
+        "via_diameter": 0.5,
+        "via_drill": 0.2,
+        "wire_width": 8
       }
     ],
     "meta": {
