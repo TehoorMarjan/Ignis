@@ -11,6 +11,7 @@
 **/*.log
 **/out.svg
 **/production/backups/*.zip
+**/fabrication-toolkit-options.json
 
 # Fichiers de fabrication (à garder si nécessaire)
 # **/*.gbr

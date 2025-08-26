@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.8,
-          "height": 1.27,
-          "width": 2.54
+          "drill": 0.4,
+          "height": 1.0,
+          "width": 1.0
         },
         "silk_line_width": 0.153,
         "silk_text_italic": false,
@@ -62,6 +62,14 @@
         [
           "lib_footprint_mismatch|28950000|49600000|04b39ae5-b67f-42ff-949e-89bfcd44a18e|00000000-0000-0000-0000-000000000000",
           "Okay, on purpose"
+        ],
+        [
+          "lib_footprint_mismatch|63720244|34600000|01ae7100-42df-483e-a34c-2b0a199ae24b|00000000-0000-0000-0000-000000000000",
+          "Changed thermal via size to match manufacturer's limitations"
+        ],
+        [
+          "lib_footprint_mismatch|70000000|51800000|e52d55bc-51ad-445d-aa77-e668314aa72e|00000000-0000-0000-0000-000000000000",
+          "Changed thermal via size to match manufacturer's limitations"
         ]
       ],
       "meta": {
@@ -228,12 +236,12 @@
           "drill": 0.0
         },
         {
-          "diameter": 0.25,
-          "drill": 0.15
+          "diameter": 0.4,
+          "drill": 0.3
         },
         {
           "diameter": 0.5,
-          "drill": 0.2
+          "drill": 0.3
         }
       ],
       "zones_allow_external_fillets": false
@@ -254,40 +262,7 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [
-      [
-        "footprint_link_issues|1358900|482600|eb84dcfa-e574-4079-ad6b-300540da449a|00000000-0000-0000-0000-000000000000|||",
-        "Used WS2812B, pin-compatible"
-      ],
-      [
-        "footprint_link_issues|1600200|482600|4aa4b149-25d5-4d37-8b54-9b8b866dc7e3|00000000-0000-0000-0000-000000000000|||",
-        "Used WS2812B, pin-compatible"
-      ],
-      [
-        "footprint_link_issues|1854200|482600|948ac4c2-1e65-48a6-b152-f7ca1efa76ef|00000000-0000-0000-0000-000000000000|||",
-        "Used WS2812B, pin-compatible"
-      ],
-      [
-        "footprint_link_issues|2095500|482600|7ab6dd98-7afc-43f5-a7fa-0b2b015c88ce|00000000-0000-0000-0000-000000000000|||",
-        "Used WS2812B, pin-compatible"
-      ],
-      [
-        "footprint_link_issues|2336800|482600|66c957d7-51cc-4f96-ab57-d82720582398|00000000-0000-0000-0000-000000000000|||",
-        "Used WS2812B, pin-compatible"
-      ],
-      [
-        "footprint_link_issues|2578100|482600|5d62c27d-ac0d-4e9e-8aef-5620de4304fa|00000000-0000-0000-0000-000000000000|||",
-        "Used WS2812B, pin-compatible"
-      ],
-      [
-        "lib_symbol_mismatch|825500|1828800|85488ac5-ffe8-477b-ab1e-789196152b11|00000000-0000-0000-0000-000000000000|||",
-        "Edited to include project-specific names"
-      ],
-      [
-        "power_pin_not_driven|2184400|863600|db68726a-b173-4a26-bdea-b1dd02f9b0f4|00000000-0000-0000-0000-000000000000|/c0d27bc6-7cc3-4f73-8ef0-8760bb072409/5f9b8629-ad7f-4628-8ddf-c445521a1622|/c0d27bc6-7cc3-4f73-8ef0-8760bb072409/5f9b8629-ad7f-4628-8ddf-c445521a1622|",
-        "Schematic is OK, no idea how to fix the error from a DRC point of view (not from a functional point of view)"
-      ]
-    ],
+    "erc_exclusions": [],
     "meta": {
       "version": 0
     },
@@ -528,15 +503,15 @@
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
-        "microvia_diameter": 0.25,
-        "microvia_drill": 0.15,
+        "microvia_diameter": 0.4,
+        "microvia_drill": 0.3,
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.2,
-        "via_diameter": 0.25,
-        "via_drill": 0.15,
+        "via_diameter": 0.4,
+        "via_drill": 0.3,
         "wire_width": 6
       },
       {
@@ -546,14 +521,14 @@
         "diff_pair_width": 0.5,
         "line_style": 0,
         "microvia_diameter": 0.5,
-        "microvia_drill": 0.2,
+        "microvia_drill": 0.3,
         "name": "Heavy",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.5,
         "via_diameter": 0.5,
-        "via_drill": 0.2,
+        "via_drill": 0.3,
         "wire_width": 8
       }
     ],
@@ -572,7 +547,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "out/IgnisV2.step",
       "svg": "",
       "vrml": ""
     },

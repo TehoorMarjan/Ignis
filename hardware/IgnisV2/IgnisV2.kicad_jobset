@@ -98,7 +98,7 @@
         "include_excluded_from_bom": false,
         "keep_line_breaks": false,
         "keep_tabs": false,
-        "output_filename": "",
+        "output_filename": "IgnisV2.csv",
         "ref_delimiter": "",
         "ref_range_delimiter": "",
         "sort_asc": true,
@@ -117,7 +117,7 @@
       "id": "5bc09154-b196-4d2f-8bc5-a7e411e32d37",
       "only": [],
       "settings": {
-        "output_path": "/home/theo/Documents/Projets/Ignis/hardware/IgnisV1-TP4056/out/"
+        "output_path": "out/"
       },
       "type": "folder"
     }

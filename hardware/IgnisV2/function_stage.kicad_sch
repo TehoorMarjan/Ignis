@@ -871,7 +871,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "LED:WS2812B"
+		(symbol "Ignis:WS2812B"
 			(pin_names
 				(offset 0.254)
 			)
@@ -896,7 +896,7 @@
 					(justify left top)
 				)
 			)
-			(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+			(property "Footprint" "Ignis:LED_WS2812B2020"
 				(at 1.27 -7.62 0)
 				(effects
 					(font
@@ -954,6 +954,17 @@
 				)
 			)
 			(symbol "WS2812B_0_1"
+				(rectangle
+					(start -5.08 5.08)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
 				(polyline
 					(pts
 						(xy 1.27 -2.54) (xy 1.778 -2.54)
@@ -1038,17 +1049,6 @@
 						(type none)
 					)
 				)
-				(rectangle
-					(start 5.08 5.08)
-					(end -5.08 -5.08)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
 			)
 			(symbol "WS2812B_1_1"
 				(pin input line
@@ -1061,7 +1061,7 @@
 							)
 						)
 					)
-					(number "4"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1079,7 +1079,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1090,14 +1090,14 @@
 				(pin power_in line
 					(at 0 -7.62 90)
 					(length 2.54)
-					(name "VSS"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1115,7 +1115,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4209,7 +4209,7 @@
 		)
 	)
 	(symbol
-		(lib_id "LED:WS2812B")
+		(lib_id "Ignis:WS2812B")
 		(at 160.02 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4940,7 +4940,7 @@
 		)
 	)
 	(symbol
-		(lib_id "LED:WS2812B")
+		(lib_id "Ignis:WS2812B")
 		(at 257.81 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5354,7 +5354,7 @@
 		)
 	)
 	(symbol
-		(lib_id "LED:WS2812B")
+		(lib_id "Ignis:WS2812B")
 		(at 233.68 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5777,7 +5777,7 @@
 		)
 	)
 	(symbol
-		(lib_id "LED:WS2812B")
+		(lib_id "Ignis:WS2812B")
 		(at 209.55 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6079,7 +6079,7 @@
 		)
 	)
 	(symbol
-		(lib_id "LED:WS2812B")
+		(lib_id "Ignis:WS2812B")
 		(at 185.42 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7772,7 +7772,7 @@
 		)
 	)
 	(symbol
-		(lib_id "LED:WS2812B")
+		(lib_id "Ignis:WS2812B")
 		(at 135.89 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
