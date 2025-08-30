@@ -4,6 +4,11 @@
 	(generator_version "9.0")
 	(uuid "27036236-5836-4f63-9129-7947279d851f")
 	(paper "A4")
+	(title_block
+		(title "Ignis")
+		(date "2025-08-24")
+		(rev "v1.1")
+	)
 	(lib_symbols
 		(symbol "Battery_Management:TP4056-42-ESOP8"
 			(exclude_from_sim no)
@@ -6583,7 +6588,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "3b2704cb-7b75-40b9-9380-9e87777b3f15")
+			(uuid "3b2704cb-7b75-40b9-9380-9e87777b3f16")
 		)
 		(instances
 			(project ""
@@ -9024,7 +9029,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "3b2704cb-7b75-40b9-9380-9e87777b3f15")
+			(uuid "3b2704cb-7b75-40b9-9380-9e87777b3f17")
 		)
 		(instances
 			(project ""
@@ -9466,10 +9471,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "946fc76a-5d5f-4db2-b691-99c4c6e60ddf")
+			(uuid "946fc76a-5d5f-4db2-b691-99c4c6e60de0")
 		)
 		(pin "1"
-			(uuid "4ef7d1f5-c92b-4d08-9602-3c7640450d7c")
+			(uuid "4ef7d1f5-c92b-4d08-9602-3c7640450d7d")
 		)
 		(instances
 			(project ""

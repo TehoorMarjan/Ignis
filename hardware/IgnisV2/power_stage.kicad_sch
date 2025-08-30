@@ -4,6 +4,11 @@
 	(generator_version "9.0")
 	(uuid "27036236-5836-4f63-9129-7947279d851f")
 	(paper "A4")
+	(title_block
+		(title "Ignis")
+		(date "2025-08-26")
+		(rev "v2.2")
+	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x01_Pin"
 			(pin_names
