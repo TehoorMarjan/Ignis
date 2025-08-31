@@ -1,6 +1,8 @@
 # 🔥 Projet Ignis - Lampe Ignis
 
-Une lampe/veilleuse autonome en forme de flamme, dont le socle contient du sable (provenant d'un lieu particulier), ce qui lui confère un aspect mystérieux et précieux, pilotée par microcontrôleur avec anneau de LEDs WS2812B.
+Une lampe/veilleuse autonome en forme de flamme, dont le socle contient du sable
+(provenant d'un lieu particulier), ce qui lui confère un aspect mystérieux et
+précieux, pilotée par microcontrôleur avec anneau de LEDs WS2812B.
 
 ## 🎯 Objectifs
 

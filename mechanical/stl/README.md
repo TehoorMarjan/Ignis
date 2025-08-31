@@ -1,17 +1,21 @@
 # 🧊 STL & Exports Imprimables - Projet Ignis
 
-Ce dossier regroupe les fichiers STL prêts pour l'impression 3D, issus des modèles artistiques du projet Lampe Ignis.
+Ce dossier regroupe les fichiers STL prêts pour l'impression 3D, issus des
+modèles artistiques du projet Lampe Ignis.
 
 ## 📚 Contexte
 
-Les modèles originaux sont créés sous Blender (`art/<model>.blend`), puis exportés en STL (`art/<model>.stl`). Pour garantir une impression fiable et des unités correctes, les fichiers STL sont retravaillés sous OrcaSlicer :
+Les modèles originaux sont créés sous Blender (`art/<model>.blend`), puis
+exportés en STL (`art/<model>.stl`). Pour garantir une impression fiable et des
+unités correctes, les fichiers STL sont retravaillés sous OrcaSlicer :
 
 - **Import STL Blender**
 - **Conversion unités en mm**
 - **Simplification et nettoyage du maillage**
 - **Export final** : `stl/<model>.stl`
 
-Pour plus d'informations sur le contexte artistique, voir le [README du dossier art](../art/README.md).
+Pour plus d'informations sur le contexte artistique, voir le
+[README du dossier art](../art/README.md).
 
 ## 🛠️ Workflow d'export
 
@@ -22,7 +26,9 @@ Pour plus d'informations sur le contexte artistique, voir le [README du dossier 
    - Simplification du maillage
    - Vérification de l'intégrité
 
-> Un remaillage avancé sous Blender serait probablement plus puissant, mais OrcaSlicer offre une solution rapide et efficace pour préparer les fichiers à l'impression.
+> Un remaillage avancé sous Blender serait probablement plus puissant, mais
+> OrcaSlicer offre une solution rapide et efficace pour préparer les fichiers à
+> l'impression.
 
 ## 📁 Organisation
 
@@ -32,4 +38,5 @@ Pour plus d'informations sur le contexte artistique, voir le [README du dossier 
 
 ---
 
-**Pour toute information sur les modèles originaux ou le contexte artistique, consultez le README du dossier art.**
+**Pour toute information sur les modèles originaux ou le contexte artistique,
+consultez le README du dossier art.**

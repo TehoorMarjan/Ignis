@@ -75,7 +75,8 @@ Index des datasheets téléchargées pour le projet Lampe Ignis.
 - ATtiny212 = ~5mA
 - **Total** : ~485mA (1.5C de la batterie)
 
-⚠️ **Attention** : Prévoir limitation logicielle pour rester sous 1C (320mA) en usage continu
+⚠️ **Attention** : Prévoir limitation logicielle pour rester sous 1C (320mA) en
+usage continu
 
 ### Efficacité Boost
 

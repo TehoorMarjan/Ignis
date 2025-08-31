@@ -4,7 +4,8 @@
 
 ### 1. FP6277 Boost Converter
 
-**Source** : [LiPo Power Board FP6277 - wagiminator](https://github.com/wagiminator/Power-Boards/blob/master/LiPo_Power_Board_FP6277/LiPo_Power_Board_FP6277_schematic.pdf)
+**Source** :
+[LiPo Power Board FP6277 - wagiminator](https://github.com/wagiminator/Power-Boards/blob/master/LiPo_Power_Board_FP6277/LiPo_Power_Board_FP6277_schematic.pdf)
 
 **Modifications pour Ignis** :
 
@@ -14,7 +15,8 @@
 
 ### 2. TP4056 avec Load Sharing
 
-**Source** : [LiPo Charger LS TP4056 - wagiminator](https://github.com/wagiminator/Power-Boards/blob/master/LiPo_Charger_LS_TP4056/LiPo_Charger_LS_TP4056_schematic.pdf)
+**Source** :
+[LiPo Charger LS TP4056 - wagiminator](https://github.com/wagiminator/Power-Boards/blob/master/LiPo_Charger_LS_TP4056/LiPo_Charger_LS_TP4056_schematic.pdf)
 
 **Adaptations** :
 
