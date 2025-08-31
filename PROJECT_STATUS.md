@@ -1,7 +1,7 @@
 # 🔥 Status Projet Ignis
 
-**Date de mise à jour** : 15 août 2025  
-**Phase actuelle** : Setup workspace et architecture de base
+**Date de mise à jour** : 1 septembre 2025  
+**Phase actuelle** : IgnisV2 PCB finalisé - Production lancée chez JLCPCB
 
 ## ✅ Réalisé
 
@@ -13,12 +13,39 @@
 - [x] Tasks VS Code pour build/upload/monitor
 - [x] Fichiers de configuration centralisés (`config.h`)
 
-### 📚 Documentation
+### 📚 Documentation & Branding
 
-- [x] Datasheets téléchargées pour tous les composants
-- [x] README technique dans `/docs/datasheets/`
-- [x] Structure de documentation organisée
+- [x] Datasheets téléchargées pour tous les composants (BQ24073, 74LVC1G17,
+      WS2812B, etc.)
+- [x] Documentation technique complète avec calculs électriques détaillés
+- [x] Calculs de filament pour l'impression 3D des boîtiers
+- [x] Structure de documentation organisée et formatée
 - [x] Copilot instructions intégrées au projet
+- [x] **Logo TheoToys finalisé** avec police Dongle Bold
+- [x] **Système automatisé** de génération des variantes de logo (Makefile)
+- [x] **Rebranding complet** des worksheets KiCAD
+
+### 🔌 Hardware - IgnisV2 PCB
+
+- [x] **Schéma électrique finalisé** avec architecture BQ24073 + BQ51013B
+- [x] **PCB layout complet** avec optimisation JLCPCB
+- [x] **Composants sourcés** et vérifiés sur JLCPCB (disponibilité + footprints)
+- [x] **Migration MCP73871 → BQ24073** pour meilleure intégration
+- [x] **Test points ajoutés** pour debug et validation
+- [x] **Solder jumpers** pour corrections post-fabrication
+- [x] **Placeholders composants** pour tweaking sans nouveau PCB
+- [x] **Fichiers de production générés** (Gerbers, BOM, P&P)
+- [x] **Commande passée chez JLCPCB** (advanced PCBA pour WS2812B)
+- [x] **Issues critiques résolues** : vias <0.3mm, pinout WS2812B-2020
+
+### 🎨 Mécanique & 3D
+
+- [x] **Modèles 3D de visualisation** : PCB, batterie, bobine de charge
+- [x] **Flamme4 avec design dual-wall** créée dans Blender
+- [x] **STL exportés** pour impression (outer + inner shell)
+- [x] **Modèles CAD FreeCAD** pour l'assemblage complet
+- [x] **SW-18030 footprint + modèle 3D** créés et intégrés
+- [x] **Correction des couleurs STEP** pour KiCAD (éviter #000000 transparent)
 
 ### 💾 Firmware
 
@@ -29,53 +56,70 @@
 
 ## 🚧 En cours / Prochaines étapes
 
-### Phase 1 : Validation Hardware
+### Phase 1 : Attente Production PCB ⏳
 
-- [ ] Test du squelette sur hardware réel (ATtiny212 + LED)
-- [ ] Validation programmation UPDI
-- [ ] Test base bouton avec pull-up
+- [ ] **Réception PCBs JLCPCB** (délai estimé : 2-3 semaines)
+- [ ] **Contrôle qualité** des PCBs assemblés
+- [ ] **Validation assemblage PCBA** (composants bien soudés)
+- [ ] **Tests électriques préliminaires** (continuité, alimentations)
 
-### Phase 2 : Contrôle LEDs
+### Phase 2 : Validation Hardware
 
-- [ ] Réintégration FastLED (après résolution problème config)
-- [ ] Test simple allumage WS2812B
-- [ ] Implémentation patterns de base (heartbeat, fade)
-- [ ] Limitation courant pour protection batterie
+- [ ] **Premier power-on** avec alimentation externe
+- [ ] **Test chargeur sans fil** (BQ51013B + bobine IWAS3010)
+- [ ] **Validation power-path** (USB/Qi vers batterie)
+- [ ] **Test boost converter** (FP6277 : 3.7V → 5V)
+- [ ] **Programmation UPDI** sur PCB final
+- [ ] **Test SW-18030** (détecteur de choc avec filtre RC)
 
-### Phase 3 : Power Management
+### Phase 3 : Firmware sur Hardware Réel
 
-- [ ] Implémentation sleep mode avec réveil par interruption
-- [ ] Optimisation consommation (désactivation modules)
-- [ ] Gestion timeout inactivité
-- [ ] Tests autonomie batterie
+- [ ] **Port du firmware** sur IgnisV2 PCB
+- [ ] **Test WS2812B-2020** (vérification pinout corrigé)
+- [ ] **Patterns LED de base** (heartbeat, fade, chenillard)
+- [ ] **Gestion power management** (sleep modes)
+- [ ] **Détection choc** pour réveil/mode interactif
 
-### Phase 4 : Hardware Complet
+### Phase 4 : Intégration Mécanique
 
-- [ ] Conception schéma électrique PCB
-- [ ] Intégration TP4056 + FP6277 + DMP1045U
-- [ ] Power-path management
-- [ ] Protection batterie
+- [ ] **Impression 3D** des boîtiers Flamme4
+- [ ] **Assemblage complet** PCB + batterie + boîtier
+- [ ] **Test d'étanchéité** (charge sans fil)
+- [ ] **Validation ergonomique** et esthétique
+- [ ] **Tests de durabilité** (cycles charge/décharge)
 
-### Phase 5 : Patterns Avancés
+### Phase 5 : Finalisation Produit
 
-- [ ] Patterns flamme réalistes (chenillard, random, scintillement)
-- [ ] Transitions fluides entre patterns
-- [ ] Détection socle pour bouton
-- [ ] Interface utilisateur complète
+- [ ] **Patterns flamme avancés** (simulation réaliste)
+- [ ] **Interface utilisateur** (détection socle, modes)
+- [ ] **Optimisation autonomie** (2-3h d'éclairage)
+- [ ] **Documentation utilisateur** finale
+- [ ] **Préparation petite série** si validation OK
 
-## 📋 Architecture Technique Validée
+## 📋 Architecture Technique IgnisV2
 
 ```
-USB 5V → TP4056 → DMP1045U → FP6277 → 5V système
-                     ↓
-                 Batterie LiPo 320mAh
-                     ↓
-         ATtiny212 @ 20MHz ← Bouton (PA1)
-             ↓
-         WS2812B × 8 LEDs (PA0)
-             ↓
-         LED Status (PA2)
+Chargeur Qi (BQ51013B) → BQ24073 → Batterie LiPo 320mAh
+                            ↓
+                     Power-path management
+                            ↓
+                       FP6277 Boost → 5V système
+                            ↓
+                    ATtiny212 @ 20MHz
+                       ↙     ↓     ↘
+               SW-18030    WS2812B    LED Status
+              (réveil)   (×6-8 LEDs)   (debug)
 ```
+
+### 🔧 Composants Finaux Sélectionnés
+
+- **MCU** : ATtiny212-SSN (SOIC-8, compatible JLCPCB basic)
+- **Chargeur** : BQ24073RGTR (Texas Instruments, advanced PCBA)
+- **Récepteur Qi** : BQ51013B + bobine IWAS3010AZEB130KF1
+- **Boost** : FP6277XR-G1 (3.7V→5V, 1A capable)
+- **LEDs** : WS2812B-2020 (6-8 pcs, pinout corrigé)
+- **Détecteur choc** : SW-18030 + 74LVC1G17 (filtre RC intégré)
+- **Batterie** : EEMB LP402535 (320mAh, protection intégrée)
 
 ## 🔧 Configuration Actuelle
 
@@ -87,27 +131,55 @@ USB 5V → TP4056 → DMP1045U → FP6277 → 5V système
 - **Toolchain** : PlatformIO + jtag2updi
 - **Debug** : Serial @ 9600 baud (si activé)
 
-## ⚠️ Points d'attention
+## ⚠️ Points d'attention & Lessons Learned
 
-1. **Courant batterie** : 8 LEDs = 485mA (1.5C), prévoir limitation logicielle
-2. **FastLED** : Problème de configuration à résoudre avant réintégration
-3. **Sleep mode** : Timer0 désactivé peut affecter millis(), à tester
-4. **UPDI** : Programmateur externe nécessaire (jtag2updi + /dev/ttyUSB0)
+### 🚨 Issues Critiques Résolues
+
+1. **WS2812B pinout** : WS2812B standard ≠ WS2812B-2020 (pins différents) ✅
+   Corrigé
+2. **Vias undersized** : <0.3mm = surcoût JLCPCB ✅ Redimensionnés
+3. **Couleurs STEP** : #000000 = transparent dans KiCAD ✅ Modifié vers #010101+
+
+### ⚡ Design Électrique
+
+1. **Courant batterie** : 8 LEDs = 485mA (1.5C), limitation logicielle requise
+2. **Charge Qi** : Efficacité ~70%, prévoir marge thermique
+3. **Power-path** : BQ24073 gère automatiquement priorité Qi vs batterie
+4. **Test points** : Indispensables pour debug hardware complexe
+
+### 🏭 Production JLCPCB
+
+1. **Advanced PCBA** : Nécessaire pour WS2812B (backing requis)
+2. **Sourcing** : Vérifier dispo composants avant finalisation
+3. **DRC** : Rules JLCPCB intégrées dès le design
+4. **Solder jumpers** : Sécurité pour corrections post-fab
 
 ## 🎯 Objectifs Immédiats
 
-1. **Tester hardware** : Valider squelette sur ATtiny212 réel
-2. **Résoudre FastLED** : Configuration pour ATtiny212
-3. **Premier pattern** : LED simple qui pulse/clignote
-4. **Power test** : Mesure consommation réelle
+### 📦 Attente Livraison (2-3 semaines)
+
+1. **Surveiller commande JLCPCB** : Progression fabrication + assemblage
+2. **Préparer banc test** : Alimentation, oscilloscope, multimètre
+3. **Finaliser programmateur UPDI** : Breadboard temporaire OK
+4. **Préparation firmware test** : Version minimale pour validation
+
+### 🔬 Dès Réception PCB
+
+1. **Inspection visuelle** : Qualité soudure, alignement composants
+2. **Tests électriques** : Continuité, court-circuits, tensions
+3. **Premier power-on** : Charge Qi + mesure consommations
+4. **Programming** : Upload firmware test via UPDI
 
 ## 📊 Métriques Projet
 
-- **Lignes de code** : ~35 (squelette minimal)
-- **Datasheets** : 6/6 téléchargées (100%)
-- **Taux compilation** : 100% (squelette)
-- **Configuration** : Complète
+- **Phase** : Production hardware (attente fabrication)
+- **PCB** : IgnisV2 finalisé et commandé chez JLCPCB
+- **Datasheets** : 8/8 composants documentés (100%)
+- **Calculs** : Électriques + mécaniques + filament (complets)
+- **Modèles 3D** : 4 variantes Flamme + modèles assemblage
+- **Documentation** : Formatée et structurée
+- **Budget** : ~50-70€ pour 5 PCBs assemblés (estimation)
 
 ---
 
-**Next milestone** : Hardware validation + FastLED integration
+**Next milestone** : Réception et validation IgnisV2 PCB ⏳
