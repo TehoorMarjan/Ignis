@@ -1,57 +1,63 @@
-# Firmware Ignis - Lampe Ignis
+# Ignis Firmware - Ignis Lamp
 
-## État actuel du projet
+## Current Project Status
 
-### ✅ Fonctionnalités implémentées
+### ✅ Implemented Features
 
-- **Squelette de base** : Structure du firmware avec boucle principale
-- **Power Management** : Gestion du mode sleep avec réveil par interruption
-- **Gestion bouton** : Détection d'appui avec debounce et interruptions
-- **LED de status** : Heartbeat simple pour debug et feedback visuel
-- **Configuration ATtiny212/412** : PlatformIO configuré pour les deux variants
+- **WS2812B LED Control** : Implementation with tinyNeoPixel library
+- **Light Patterns** : Cycling pattern with 7 colors (Red, Green, Blue, Purple,
+  Yellow, Cyan, White)
+- **ATtiny212 Configuration** : PlatformIO configured for ATtiny212 (IgnisV2.2)
+- **Basic Structure** : Code organized with board.h for hardware abstraction
 
-### 🚧 À implémenter
+### 🚧 To Implement
 
-- **LEDs WS2812B** : Contrôle de la strip de LEDs (FastLED)
-- **Patterns lumineux** : Heartbeat, chenillard, fade, random
-- **Optimisations power** : Fine-tuning du sleep mode
-- **Détection socle** : Logic pour savoir si sur station de charge
+- **Power Management** : Sleep mode management with interrupt wake-up
+- **Shock Sensor** : SW18030 integration for shake detection
+- **Charge Detection** : Using CHRG_B, PGOOD_B, IND_B pins
+- **Advanced Light Patterns** : Heartbeat, fade, realistic flame effects
+- **Power Optimizations** : Sleep modes for battery conservation
+- **Battery Management** : Charge level monitoring
 
-## Structure du firmware
+## Hardware Configuration
 
-```
-firmware/
-├── platformio.ini          # Configuration PlatformIO
-├── src/
-│   └── main.cpp            # Firmware principal
-├── include/                # Headers (vide pour l'instant)
-├── lib/                    # Librairies locales (vide)
-└── test/                   # Tests unitaires (à venir)
-```
-
-## Configuration matérielle
-
-- **Microcontrôleur** : ATtiny212 ou ATtiny412 @ 20MHz
-- **Pin LED strip** : PA0 (LED_PIN = 0)
-- **Pin bouton** : PA1 (BUTTON_PIN = 1) avec pull-up interne
-- **Pin status LED** : PA2 (STATUS_LED_PIN = 2) pour debug
-- **Programmation** : UPDI via jtag2updi
+- **Microcontroller** : ATtiny212 @ 20MHz (IgnisV2.2 PCB)
+- **WS2812B Pin** : PA6 (PIN_LED = PIN_PA6)
+- **Shock Sensor Pin** : PA7 (PIN_SSW = PIN_PA7) with RC filter + Schmitt
+  trigger
+- **Inductor Detection Pin** : PA1 (PIN_IND_B = PIN_PA1) - Low when inductor
+  active
+- **Battery Charging Pin** : PA2 (PIN_CHRG_B = PIN_PA2) - Low during charging
+- **Charge Complete Pin** : PA3 (PIN_PGOOD_B = PIN_PA3) - Low when charging
+  complete
+- **UPDI Pin** : PA0 (PIN_UPDI = PIN_PA0) for programming
+- **LED Count** : 6 WS2812B-2020 LEDs
 
 ## Power Management
 
-Le firmware implémente un système de gestion d'énergie :
+The firmware aims to implement an optimized power management system:
 
-1. **Mode actif** : LED status clignote, écoute du bouton
-2. **Timeout inactivité** : 30 secondes sans interaction
-3. **Mode sleep** : `SLEEP_MODE_PWR_DOWN` (le plus économe)
-4. **Réveil** : Interruption sur changement d'état du bouton (PCINT)
+1. **Active Mode** : WS2812B LED control, sensor monitoring
+2. **Inactivity Detection** : Based on SW18030 shock sensor
+3. **Sleep Mode** : `SLEEP_MODE_PWR_DOWN` for maximum autonomy
+4. **Wake-up** : Interrupt on motion detection or charging
+5. **Charge Monitoring** : Using BQ24073 pins for battery status
 
-### Modules désactivés en sleep
+Test software showed that all 6 LEDs at full brightness consume around
 
-- ADC (power_adc_disable)
-- SPI (power_spi_disable)
-- Timer0/Timer1 (peut affecter millis())
-- Tous réactivés au réveil (power_all_enable)
+$$
+I_{max} = \boxed{380\,\text{mA}} \implies P_{max} = 1.9\,\text{W}
+$$
+
+As this is above 1C for the 320mAh battery, power management and brightness
+control will be needed to ensure good battery life.
+
+### Power Saving Strategy
+
+- Disable ADC, SPI, timers in sleep mode
+- Intelligent PWM for LED brightness control
+- Automatic charging station detection (IND_B)
+- Adaptive pattern management based on battery level
 
 ## Compilation
 
@@ -59,30 +65,47 @@ Le firmware implémente un système de gestion d'énergie :
 # Via VS Code PlatformIO
 Ctrl+Shift+P -> "PlatformIO: Build"
 
-# Ou via terminal (si pio installé)
+# Or via terminal (if pio installed)
 cd firmware/
 pio run
 ```
 
 ## Upload/Debug
 
-Configuration UPDI dans `platformio.ini` :
+Pymcuprog configuration in `platformio.ini`:
 
-- Port : `/dev/ttyUSB0` (à adapter)
-- Protocol : `jtag2updi`
-- Vitesse : 115200 baud
+- Programmer : `pymcuprog` via UART
+- Device : `attiny212`
+- Port : `$UPLOAD_PORT` (defined by PlatformIO)
+- Speed : 115200 baud
+- UPDI : Programming via PA0
 
-## Prochaines étapes
+**⚠️ Important** : Generally, the power supplied by the USB-to-serial adapter is
+not sufficient to power the board during programming. Attach an external power
+supply on the board, if possible by injecting 3.7V (same as battery pack) on the
+VSYS drilled pad.
 
-1. **Tester le squelette** sur hardware réel
-2. **Ajouter FastLED** et contrôle WS2812B
-3. **Implémenter patterns** lumineux
-4. **Optimiser consommation** électrique
-5. **Tests d'autonomie** batterie
+### Pymcuprog Installation
 
-## Debug
+The `scripts/requirements.py` script automatically installs pymcuprog if needed.
 
-- `#define DEBUG 1` dans platformio.ini pour traces Serial
-- LED status clignote = système actif
-- 3 clignotements rapides = bouton pressé
-- 1 clignotement long au réveil = sortie de sleep
+```bash
+# Manual installation if required
+pip install pymcuprog
+```
+
+## Next Steps
+
+1. **Hardware Validation** : Test pins and basic functions
+2. **Light Patterns** : Implement realistic flame effects
+3. **Shock Sensor** : SW18030 integration with interrupts
+4. **Power Management** : Sleep modes and intelligent wake-up
+5. **Battery Monitoring** : Charge and autonomy management
+6. **Autonomy Tests** : Validate 2-3 hour target
+
+## Debug and Development
+
+- Code compiled and tested on IgnisV2.2 PCB
+- Using tinyNeoPixel for WS2812B control
+- Incremental development for hardware validation
+- Power consumption and light pattern testing
