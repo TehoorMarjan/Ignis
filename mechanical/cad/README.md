@@ -55,6 +55,10 @@ integration.
   <img src="TestStand/TestStand_mounted.png" alt="TestStand Mounted View" width="400">
 </p>
 
+<p align="center">
+  <img src="TestStand/IMG_20250910_213844.jpg" alt="TestStand Mounted View" width="400">
+</p>
+
 Custom test fixture for IgnisV2.2 PCB programming and validation with pogo pin
 connections.
 
