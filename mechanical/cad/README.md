@@ -95,10 +95,40 @@ component needs a clearance in the Top part because it is too tall. Also, I've
 read that testing pads are better placed on the rear side of the PCB. I've read
 that too late in the design process and now I understand why!
 
-**Next Steps**:
+## 🧩 TestStand V2 - PCB Test Fixture
 
-- [ ] Waiting for new pogo pins delivery
-- [ ] Version 2 design with improved:
-  - Hook integration
-  - Reinforced cable management
-  - New pogo pins
+<p align="center">
+  <img src="TestStandV2/TestStandV2pins.png" alt="TestStand 3D Model" width="400">
+</p>
+
+<p align="center">
+  <img src="TestStandV2/TestStandV2.png" alt="TestStand Mounted View" width="400">
+</p>
+
+<p align="center">
+  <img src="TestStandV2/IMG_20250915_040439.jpg" alt="TestStand Real View" width="400">
+</p>
+
+<p align="center">
+  <img src="TestStandV2/IMG_20250915_040316.jpg" alt="TestStand Real Mounted View" width="400">
+</p>
+
+Custom test fixture for IgnisV2.2 PCB programming and validation with pogo pin
+connections.!
+
+**Files**:
+
+- `TestStandV2.FCStd` - FreeCAD source file
+- `TestStandV2-Guide.stl` - Upper part for 3D printing
+- `TestStandV2-Base.stl` - Lower part with pogo pin holders
+- `TestStandV2-Hook.stl` - PCB retention hooks
+- `TestStandV2.3mf` - 3D model file for 3D printing (OrcaSlicer)
+- `IgnisV2TP.csv` - Test pad assignment to connector, position and cable colors
+
+**Features**:
+
+- Positioned pogo pins to match IgnisV2.2 test pads and drilled holes
+- Base and Guide disks to hold the pogo pins securely
+- Sticks to guide the PCB through its testing holes
+- Hooks hold board under test in position
+- Cable management
