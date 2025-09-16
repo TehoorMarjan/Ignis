@@ -132,3 +132,28 @@ connections.!
 - Sticks to guide the PCB through its testing holes
 - Hooks hold board under test in position
 - Cable management
+
+## 🧩 UPDI Flasher Box
+
+<p align="center">
+  <img src="UPDIFlasherBox/UPDIFlasherBox.png" alt="UPDI Flasher Box 3D Model" width="400">
+</p>
+
+Custom enclosure for the UPDI programmer used to flash the ATtiny212 microcontroller on the Ignis board.
+
+**Files**:
+
+- `UPDIFlasherBox.FCStd` - FreeCAD source file
+- `UPDIFlasherBox-Top.stl` - Upper part for 3D printing
+- `UPDIFlasherBox-Bottom.stl` - Lower part for 3D printing
+
+**Features**:
+
+- Simple single-wire UPDI protocol implementation using UART (RX/TX)
+- Diode-based direction selection for RX/TX communication
+- Built on protoboard for easy prototyping and modifications
+- Power selection switch between USB power and external PSU
+- Two-wire connection for external power supply (standard PSU)
+- Compact enclosure protecting the protoboard circuit
+- Easy access to programming connections
+
