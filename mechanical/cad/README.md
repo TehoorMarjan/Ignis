@@ -139,6 +139,10 @@ connections.!
   <img src="UPDIFlasherBox/UPDIFlasherBox.png" alt="UPDI Flasher Box 3D Model" width="400">
 </p>
 
+<p align="center">
+  <img src="UPDIFlasherBox/UPDIFlasherBoxAssembled.jpg" alt="UPDI Flasher Box Real Assembly" width="400">
+</p>
+
 Custom enclosure for the UPDI programmer used to flash the ATtiny212 microcontroller on the Ignis board.
 
 **Files**:
