@@ -1,246 +1,244 @@
-# Calculs Électriques - Projet Ignis
+# Electrical Calculations - Ignis Project
 
-## Calculs Batterie et Consommation
+## Battery and Consumption Calculations
 
-### Batterie EEMB LP402535 (320 mAh)
+### EEMB LP402535 Battery (320 mAh)
 
-- Capacité nominale : 320 mAh
-- Tension nominale : 3.7V
-- Impédance interne : 160 mΩ
-- Charge :
-  - Courant maximum : 320 mA (1C)
-  - Tension maximum : 4.2 V
-  - Courant en fin de charge : 6.4 mA
-- Décharge :
-  - Courant maximum : 2C = 640 mA
-  - Tension minimum : 2.75 V
-- Température de fonctionnement :
-  - En décharge : -20°C à +60°C
-  - En charge : 0°C à +45°C
+- Nominal capacity: 320 mAh
+- Nominal voltage: 3.7 V
+- Internal resistance: 160 mΩ
+- Charging:
+  - Maximum current: 320 mA (1C)
+  - Maximum voltage: 4.2 V
+  - End-of-charge current: 6.4 mA
+- Discharge:
+  - Maximum current: 2C = 640 mA
+  - Minimum voltage: 2.75 V
+- Operating temperature:
+  - Discharge: -20 °C to +60 °C
+  - Charge: 0 °C to +45 °C
 
-### Consommations par composant
+### Current Consumption per Component
 
-| Composant          | Courant (mA) | Notes                      |
-| ------------------ | ------------ | -------------------------- |
-| ATtiny212 (actif)  | 3-5          | @ 20 MHz, 5V               |
-| ATtiny212 (sleep)  | 0.1-1        | Power-down mode            |
-| WS2812B (par LED)  | 0.3-60       | 0.3mA off, 60mA full white |
-| MCP73871 (standby) | 18 µA        | Très faible en veille      |
-| BQ51013B (standby) | 30 µA        | Récepteur Qi inactif       |
-| FP6277 (standby)   | 50-100 µA    | Très faible en veille      |
+| Component          | Current (mA) | Notes                        |
+| ------------------ | ------------ | ---------------------------- |
+| ATtiny212 (active) | 3–5          | @ 20 MHz, 5 V                |
+| ATtiny212 (sleep)  | 0.1–1        | Power-down mode              |
+| WS2812B (per LED)  | 0.3–60       | 0.3 mA off, 60 mA full white |
+| MCP73871 (standby) | 18 µA        | Very low in standby          |
+| BQ51013B (standby) | 30 µA        | Inactive Qi receiver         |
+| FP6277 (standby)   | 50–100 µA    | Very low in standby          |
 
-### Scénarios d'utilisation
+### Usage Scenarios
 
-#### Scénario 1 : 6 LEDs, luminosité 50%
-
-```
-LEDs : 6 × 30 mA = 180 mA
-MCU : 5 mA
-Boost : 2 mA (pertes estimation)
-TOTAL : ~187 mA
-
-Autonomie : 320 mAh / 187 mA = 1.7 heures
-```
-
-#### Scénario 2 : 8 LEDs, luminosité 75%
+#### Scenario 1: 6 LEDs, 50% brightness
 
 ```
-LEDs : 8 × 45 mA = 360 mA
-MCU : 5 mA
-Boost : 3 mA
-TOTAL : ~368 mA
+LEDs: 6 × 30 mA = 180 mA
+MCU: 5 mA
+Boost: 2 mA (estimated losses)
+TOTAL: ~187 mA
 
-Autonomie : 320 mAh / 368 mA = 0.87 heures
-⚠️ Dépasse 1C recommandé, OK pour usage ponctuel
+Runtime: 320 mAh / 187 mA = 1.7 hours
 ```
 
-#### Scénario 3 : Mode veille (patterns off)
+#### Scenario 2: 8 LEDs, 75% brightness
 
 ```
-MCU (sleep) : 0.5 mA
-LEDs (off) : 8 × 0.3 = 2.4 mA
-Boost (standby) : 0.1 mA
-TOTAL : ~3 mA
+LEDs: 8 × 45 mA = 360 mA
+MCU: 5 mA
+Boost: 3 mA
+TOTAL: ~368 mA
 
-Autonomie : 320 mAh / 3 mA = 106 heures (4.4 jours)
+Runtime: 320 mAh / 368 mA = 0.87 hours
+⚠️ Exceeds recommended 1C, OK for occasional use
 ```
 
-## Récepteur Qi - BQ51013B
+#### Scenario 3: Standby mode (patterns off)
 
-### Caractéristiques générales
+```
+MCU (sleep): 0.5 mA
+LEDs (off): 8 × 0.3 = 2.4 mA
+Boost (standby): 0.1 mA
+TOTAL: ~3 mA
 
-- **Type** : Récepteur Qi WPC v1.2 (BPP - Baseline Power Profile)
-- **Puissance** : Jusqu'à 5W
-- **Tension de sortie** : 5V régulé
-- **Courant max** : 1A
-- **Fréquence** : 100-250 kHz (bande WPC)
-- **Communication** : ASK/FSK avec transmetteur
-- **FOD** : Foreign Object Detection intégré
+Runtime: 320 mAh / 3 mA = 106 hours (4.4 days)
+```
 
-### Bobine réceptrice - IWAS3010AZEB130KF1 (Vishay)
+## Qi Receiver - BQ51013B
 
-**Spécifications** :
+### General Characteristics
 
-- Dimensions : 30mm × 10mm (forme rectangulaire)
-- Inductance : 12.9 µH @ 100 kHz
-- Facteur de qualité Q : 11
-- Résistance DC : 780 mΩ
-- Puissance max : 3.5W
-- Courant max : 800 mA
-- Compliance Qi : WPC v1.2
+- **Type**: Qi receiver WPC v1.2 (BPP - Baseline Power Profile)
+- **Power**: Up to 5 W
+- **Output voltage**: Regulated 5 V
+- **Max current**: 1 A
+- **Frequency**: 100–250 kHz (WPC band)
+- **Communication**: ASK/FSK with transmitter
+- **FOD**: Built-in Foreign Object Detection
 
-### Calcul des condensateurs de résonance
+### Receiver Coil - IWAS3010AZEB130KF1 (Vishay)
 
-Le BQ51013B nécessite deux condensateurs de résonance :
+**Specifications**:
 
-**C1 (série)** - Condensateur de résonance principale :
+- Dimensions: 30 mm × 10 mm (rectangular shape)
+- Inductance: 12.9 µH @ 100 kHz
+- Quality factor Q: 11
+- DC resistance: 780 mΩ
+- Max power: 3.5 W
+- Max current: 800 mA
+- Qi compliance: WPC v1.2
+
+### Resonant Capacitor Calculations
+
+The BQ51013B requires two resonant capacitors:
+
+**C1 (series)** – Main resonant capacitor:
 $$C_1 = \frac{1}{(2\pi \times f_S)^2 \times L_S^\prime}$$
 
-Avec $L_S^\prime \approx 15\,\mu H$ dans notre cas (à confirmer) et
-$f_S = 100\,\text{kHz}$ (donné par la documentation du BQ51013B) :
+With $L_S^\prime \approx 15\,\mu H$ in our case (to be confirmed) and
+$f_S = 100\,\text{kHz}$ (from the BQ51013B documentation):
 
-$$C_1 \approx 168,868\,\text{nF}$$
+$$C_1 \approx 168{,}868\,\text{nF}$$
 
-On peut choisir $C_1 = 150\,\text{nF}$ ou
-$C_1 = 150\,\text{nF} + 15\,\text{nF} = 165\,\text{nF}$, à ce stade c'est une
-question d'implémentation. Dans une certaine mesure, la version à 2
-condensateurs peut offrir une meilleure adaptabilité, surtout que $L_S^\prime$
-n'est pas entièrement connue à ce stade. L'erreur en fréquence serait à ce
-moment $\leq 2.7\%$.
+We can choose $C_1 = 150\,\text{nF}$ or
+$C_1 = 150\,\text{nF} + 15\,\text{nF} = 165\,\text{nF}$. At this stage this is
+an implementation detail. To some extent, the 2-capacitor version can offer
+better tunability, especially since $L_S^\prime$ is not fully known at this
+point. The frequency error would then be $\leq 2.7\%$.
 
-**C2 (parallèle)** - Condensateur de mise au point :
+**C2 (parallel)** – Fine-tuning capacitor:
 
-Avec $L_S = 12.9\,\mu H$ (inductance libre, donné par la datasheet de
-l'inductance) et $f_D = 1\,\text{MHz}$ (donné par la datasheet du BQ51013B) :
+With $L_S = 12.9\,\mu H$ (unloaded inductance, from the coil datasheet) and
+$f_D = 1\,\text{MHz}$ (from the BQ51013B datasheet):
 
 $$C_2 = \frac{1}{(2\pi \times f_D)^2 \times L_S - \frac{1}{C_1}}$$
 
-soit $C_2 \approx 1,987\,\text{nF} \text{ à } 1,989\,\text{nF}$ selon que l'on
-choisisse $C_1 = 165\,\text{nF}$ ou $C_1 = 150\,\text{nF}$, autant dire qu'il
-n'y a aucune différence et on peut choisir $C_2 = 2\,\text{nF}$ ou
+which gives $C_2 \approx 1.987\,\text{nF} \text{ to } 1.989\,\text{nF}$
+depending on whether $C_1 = 165\,\text{nF}$ or $C_1 = 150\,\text{nF}$ is chosen,
+i.e. practically no difference. We can therefore choose $C_2 = 2\,\text{nF}$ or
 $C_2 = 1\,\text{nF} + 1\,\text{nF}$.
 
-### Calcul R_ILIM
+### R_ILIM Calculation
 
-La limitation de courant du BQ51013B se règle via la résistance $R_{ILIM}$ selon
-:
+The current limit of the BQ51013B is set via resistor $R_{ILIM}$ according to:
 
 $$
 R_{ILIM} = \frac{K_{ILIM}}{I_{MAX}}
 $$
 
-où $K_{ILIM}$ est donné par la datasheet ($614\,\Omega\text{A}$), et $I_{MAX}$
-est le courant maximal souhaité.
+where $K_{ILIM}$ is given in the datasheet ($614\,\Omega\text{A}$), and
+$I_{MAX}$ is the desired maximum current.
 
-La datasheet précise que le courant de limitation réel est :
+The datasheet specifies that the actual limit current is:
 
 $$
 I_{ILIM} = 1.2 \times I_{MAX} = \frac{K_{ILIM}}{R_{ILIM}}
 $$
 
-$R_{ILIM}$ est la somme de deux résistances :
+$R_{ILIM}$ is the sum of two resistors:
 
 $$
 R_{ILIM} = R_1 + R_{FOD}
 $$
 
-avec $R_{FOD}$ par défaut à $196\,\Omega$.
+with $R_{FOD}$ by default at $196\,\Omega$.
 
-Pour $I_{MAX} \geq 600\,\text{mA}$, $I_{ILIM} = 720\,\text{mA}$
+For $I_{MAX} \geq 600\,\text{mA}$, $I_{ILIM} = 720\,\text{mA}$
 
 $$
 R_{ILIM} = \frac{614}{0.72} \approx 436\,\Omega \implies R_1 = 240\,\Omega
 $$
 
-En pratique, avec $R_{FOD} = 196\,\Omega$, on choisit $R_1 = 220\,\Omega$
-(valeur standard) :
+In practice, with $R_{FOD} = 196\,\Omega$, we choose $R_1 = 220\,\Omega$
+(standard value):
 
 $$
 R_{ILIM} = 220 + 196 = 416\,\Omega \implies I_{ILIM} \approx 754\,\text{mA} \implies I_{MAX} \approx 629\,\text{mA}
 $$
 
-### Composants BQ51013B
+### BQ51013B Components
 
-- C1a (série) : 150 nF, 25V, X7R
-- C1b (série) : 15 nF, 25V, X7R
-- C2a (parallèle) : 1 nF, 25V, X7R
-- C2b (parallèle) : 1 nF, 25V, X7R
-- C3 (RECT) : 10 µF + 10µF + 0.1µF, 16V
-- C4 (OUT) : 10 µF + 0.1µF, 16V
-- C5 (BOOT) : 10 nF, 25V
-- C6 (CLAMP) : 470 nF, 25V
-- C7 (COMM) : 47 nF, 25V
-- R1 (ILIM) : 220 Ω
-- Rfod (FOD) : 196 Ω
-- Ros (RECT) : 20 kΩ
+- C1a (series): 150 nF, 25 V, X7R
+- C1b (series): 15 nF, 25 V, X7R
+- C2a (parallel): 1 nF, 25 V, X7R
+- C2b (parallel): 1 nF, 25 V, X7R
+- C3 (RECT): 10 µF + 10 µF + 0.1 µF, 16 V
+- C4 (OUT): 10 µF + 0.1 µF, 16 V
+- C5 (BOOT): 10 nF, 25 V
+- C6 (CLAMP): 470 nF, 25 V
+- C7 (COMM): 47 nF, 25 V
+- R1 (ILIM): 220 Ω
+- Rfod (FOD): 196 Ω
+- Ros (RECT): 20 kΩ
 
-### Configuration des broches
+### Pin Configuration
 
-- **AC1/AC2** : Connexion bobine réceptrice
-- **RECT** : Tension rectifiée (~8-10V)
-- **OUT** : Sortie régulée 5V
-- **AD** : Lié à GND via 1µF (pas de gestion dual-power)
-- **EN** : Enable, pullup 10kΩ vers OUT
-- **TS/CTRL** : Configuration, voir datasheet
+- **AC1/AC2**: Receiver coil connection
+- **RECT**: Rectified voltage (~8–10 V)
+- **OUT**: Regulated 5 V output
+- **AD**: Tied to GND via 1 µF (no dual-power management)
+- **EN**: Enable, 10 kΩ pull-up to OUT
+- **TS/CTRL**: Configuration, see datasheet
 
-## Chargeur de batterie - BQ24073
+## Battery Charger - BQ24073
 
-Le BQ24073 de Texas Instruments est un chargeur Li-ion/Li-Po switching avec
-power-path management intégré :
+The BQ24073 from Texas Instruments is a switching Li-ion/Li-Po charger with
+integrated power-path management:
 
-- Chargeur switching haute efficacité (vs linéaire)
-- Power-path management automatique
-- Compatible avec récepteur Qi BQ51013B (même fabricant)
-- Protection thermique et électrique intégrée
-- Indication de statut via broches CHG et PGOOD
-- Gestion du courant d'entrée via EN1/EN2
+- High-efficiency switching charger (vs linear)
+- Automatic power-path management
+- Compatible with Qi receiver BQ51013B (same manufacturer)
+- Built-in thermal and electrical protection
+- Status indication via CHG and PGOOD pins
+- Input current management via EN1/EN2
 
-### Programmation de la charge
+### Charge Programming
 
-Le courant de charge se programme via résistance $R_{ISET}$ connectée de la
-broche ISET vers VSS : $$R_{ISET} = \frac{K_{ISET}}{I_{CHARGE}}$$
+The charge current is set via resistor $R_{ISET}$ connected from the ISET pin to
+VSS: $$R_{ISET} = \frac{K_{ISET}}{I_{CHARGE}}$$
 
 $$
 K_{ISET} = 890\,\Omega\text{A} \implies R_{ISET} = \frac{890}{0.32} \approx 2781\,\Omega \approx \boxed{2.7\,k\Omega}
 $$
 
 $$
-R_{TMR} = \frac{t_{MAXCHG}}{10 \times K_{TMR}}\,\text{avec}\, K_{TMR} = 48 \text{s}/\text{k}\Omega
+R_{TMR} = \frac{t_{MAXCHG}}{10 \times K_{TMR}}\,\text{with}\, K_{TMR} = 48 \text{s}/\text{k}\Omega
 $$
 
-Pour une charge à 1 C (320 mA), la durée théorique est de 1 h. En pratique, la
-charge s'effectue en deux phases :
+For a 1 C charge (320 mA), the theoretical duration is 1 h. In practice, the
+charge proceeds in two phases:
 
-- **Phase CC (courant constant)** : 320 mA jusqu'à environ 4,2 V, soit 40 à 50
-  min pour atteindre 70 à 80 % de la capacité.
-- **Phase CV (tension constante)** : la tension reste à 4,2 V, le courant
-  diminue progressivement jusqu'au seuil de fin (généralement 0,1 C à 0,05 C),
-  ce qui ajoute 20 à 50 min.
+- **CC phase (constant current)**: 320 mA up to around 4.2 V, i.e. 40 to 50 min
+  to reach 70 to 80% of the capacity.
+- **CV phase (constant voltage)**: voltage remains at 4.2 V, current gradually
+  decreases down to the termination threshold (typically 0.1 C to 0.05 C),
+  adding 20 to 50 min.
 
-En règle générale :
+As a rule of thumb:
 
-- Arrêt à 0,1 C (32 mA) : durée totale de 1,2 à 1,4 h.
-- Arrêt à 0,05 C (16 mA) : durée totale de 1,4 à 1,8 h.
+- Termination at 0.1 C (32 mA): total duration 1.2 to 1.4 h.
+- Termination at 0.05 C (16 mA): total duration 1.4 to 1.8 h.
 
-Une pré-charge à faible courant (0,05–0,1 C) peut ajouter 10 à 20 min si la
-cellule est très déchargée.
+A pre-charge at low current (0.05–0.1 C) can add 10 to 20 min if the cell is
+very discharged.
 
-On retient donc une durée de charge typique comprise entre 1,2 et 1,6 h à 1 C,
-selon le seuil d'arrêt, la température et l'état initial de la batterie.
+We therefore take a typical charge time between 1.2 and 1.6 h at 1 C, depending
+on termination threshold, temperature, and initial state of the battery.
 
-On choisit $t_{MAXCHG}$ à deux fois la durée attendue pour couvrir les cas de
-courant réduit :
+We choose $t_{MAXCHG}$ as twice the expected duration to cover cases of reduced
+current:
 
 $$
-t_{MAXCHG} = 2 \times 1,6\,\text{h} = 3,2\,\text{h} = 11\,520\,\text{s} \\
+t_{MAXCHG} = 2 \times 1.6\,\text{h} = 3.2\,\text{h} = 11\,520\,\text{s} \\
 \implies R_{TMR} = \frac{11 520}{10 \times 48} = \boxed{24\,\text{k}\Omega}
 $$
 
-### Limitation courant d'entrée
+### Input Current Limitation
 
-Pour ce projet, on utilise le mode programmable (EN2=1, EN1=0) pour ajuster la
-limite d'entrée selon la capacité du récepteur Qi. Calculer $R_{ILIM}$ pour
-fixer le courant max à ≤ 629 mA.
+For this project, we use the programmable mode (EN2=1, EN1=0) to adjust the
+input limit according to the Qi receiver capability. Compute $R_{ILIM}$ to set
+the maximum current to ≤ 629 mA.
 
 $$R_{ILIM} = \frac{K_{ILIM}}{I_{IN\_MAX}}$$
 
@@ -248,339 +246,335 @@ $$
 K_{ILIM} = 1550\,\Omega\text{A} \implies R_{ILIM} = \frac{1550}{0.629} \approx 2.46\,k\Omega \approx \boxed{2.4\,k\Omega}
 $$
 
-### Composants BQ24073 (à calculer)
+### BQ24073 Components (to be used)
 
-- C_IN : 1µF, 16V, X7R
-- C_BAT : 4.7µF, 16V, X7R
-- C_OUT : 4.7µF, 16V, X7R
-- R_TS : 10kΩ (fixe, remplace thermistance)
-- R_ILIM : 2.4kΩ
-- R_ISET : 2.7kΩ
-- R_TMR : 24kΩ
+- C_IN: 1 µF, 16 V, X7R
+- C_BAT: 4.7 µF, 16 V, X7R
+- C_OUT: 4.7 µF, 16 V, X7R
+- R_TS: 10 kΩ (fixed, replaces thermistor)
+- R_ILIM: 2.4 kΩ
+- R_ISET: 2.7 kΩ
+- R_TMR: 24 kΩ
 
-## Configuration FP6277 Boost
+## FP6277 Boost Configuration
 
-### Réglage tension sortie (5V)
+### Output Voltage Setting (5 V)
 
-La tension de sortie est définie par le pont diviseur selon :
+The output voltage is defined by the feedback divider:
 
 $$
 V_{out} = 0.6\,\text{V} \times \left(1 + \frac{R_1}{R_2}\right)
 $$
 
-Pour $V_{out} = 5\,\text{V}$ :
+For $V_{out} = 5\,\text{V}$:
 
 $$
 5 = 0.6 \times \left(1 + \frac{R_1}{R_2}\right) \\
 \frac{R_1}{R_2} = \frac{5}{0.6} - 1 = 7.33
 $$
 
-Si $R_2 = 10\,\text{k}\Omega$ alors
+If $R_2 = 10\,\text{k}\Omega$ then
 $R_1 = 73.3\,\text{k}\Omega \approx 75\,\text{k}\Omega$
 
-### Calcul inductance optimale
+### Optimal Inductance Calculation
 
-L'inductance optimale pour le FP6277 se calcule avec :
+The optimal inductance for the FP6277 is given by:
 
 $$
 L = \frac{V_{in(max)} \times (V_{out} - V_{in(max)})}{V_{out} \times (\Delta I_L) \times f_{sw}}
 $$
 
-Avec :
+With:
 
-- $V_{in(max)} = 4.2\,V$ (batterie pleine)
+- $V_{in(max)} = 4.2\,V$ (full battery)
 - $V_{out} = 5.0\,V$
-- $\Delta I_L = 500\,\text{mA} \times 30\% = 0.15\,A$ (ripple 30% du courant
-  moyen)
-- $f_{sw} = 1.4\,\text{MHz}$ (fréquence FP6277)
+- $\Delta I_L = 500\,\text{mA} \times 30\% = 0.15\,A$ (30% ripple of average
+  current)
+- $f_{sw} = 1.4\,\text{MHz}$ (FP6277 frequency)
 
 $$
 L = \frac{4.2 \times (5.0 - 4.2)}{5.0 \times 0.15 \times 1.4 \times 10^6} = 3.2\,\mu H
 $$
 
-**Inductance recommandée** : 3.3 µH (permet de rejoindre le design de référence)
+**Recommended inductance**: 3.3 µH (matches the reference design)
 
-### Protection contre surintensité
+### Overcurrent Protection
 
-La limitation de courant du FP6277 se règle via une résistance entre la broche
-OC et la masse :
+The current limit of the FP6277 is set via a resistor between the OC pin and
+ground:
 
 $$
 I_{OCP} = \frac{180\,000}{R_{OC}} + 0.2
 $$
 
-Pour programmer $I_{OCP} = 0.64\,\text{A}$ (640 mA, max batterie) :
+To set $I_{OCP} = 0.64\,\text{A}$ (640 mA, battery max):
 
 $$
 R_{OC} = \frac{180\,000}{0.44} = 409\,\text{k}\Omega \approx 390\,\text{k}\Omega
 $$
 
-**Composants FP6277** :
+**FP6277 Components**:
 
-- L1 : Inductance 3.3 µH, courant sat > 1A
-- C1 (Vin) : 22 µF, 16V
-- C2 (Vout) : 22 µF, 16V
-- C3 (Vout) : 100 µF, 16V
-- R1 : 75 kΩ (feedback high)
-- R2 : 10 kΩ (feedback low)
-- R3 : 390 kΩ (OC)
+- L1: 3.3 µH inductor, saturation current > 1 A
+- C1 (Vin): 22 µF, 16 V
+- C2 (Vout): 22 µF, 16 V
+- C3 (Vout): 100 µF, 16 V
+- R1: 75 kΩ (feedback high)
+- R2: 10 kΩ (feedback low)
+- R3: 390 kΩ (OC)
 
-## Calcul du filtre pour le SW18030
+## SW18030 Filter Calculation
 
-Le SW18030 est un capteur de choc utilisant un ressort enroulé autour d'une tige
-métallique. Lors d'un choc ou d'une accélération, le ressort vient brièvement
-toucher la tige, générant un contact très court. Pour prolonger ce signal et le
-rendre exploitable, on ajoute un circuit RC qui étire la durée de l'impulsion.
-Afin d'obtenir un signal carré propre, compatible avec le réveil de l'ATtiny en
-mode sommeil, on place ensuite un Bascule de Schmitt non-inverseur à la sortie
-du filtre RC.
+The SW18030 is a shock sensor using a spring wound around a metal rod. On impact
+or acceleration, the spring briefly touches the rod, generating a very short
+contact. To stretch this signal and make it usable, an RC circuit is added to
+extend the pulse width. To obtain a clean square signal, compatible with waking
+up the ATtiny from sleep mode, a non-inverting Schmitt trigger buffer is placed
+after the RC filter.
 
-Lors d'un choc, le SW18030 ferme le contact pendant ~1 ms. Pour obtenir une
-impulsion exploitable, la constante de temps du filtre RC doit être bien
-inférieure à cette durée.
+On impact, the SW18030 closes the contact for ~1 ms. To obtain a usable pulse,
+the time constant of the RC filter must be much shorter than this duration.
 
-**Filtre RC (charge rapide) :**
+**RC filter (fast charge):**
 
-- Résistance série : $R_s$
-- Capacité : $C$
-- Constante de temps : $\tau = R_s \times C$
+- Series resistor: $R_s$
+- Capacitance: $C$
+- Time constant: $\tau = R_s \times C$
 
-Pour ce projet :
+For this project:
 
 - $R_s = 470\,\Omega$
 - $C = 22\,\text{nF}$
 - $\tau = 470\,\Omega \times 22\,\text{nF} = 10{,}3\,\mu\text{s} \ll 1\,\text{ms}$
 
-Le condensateur se charge quasi-instantanément, permettant au signal d’atteindre
-rapidement le seuil haut du Schmitt ($V_T^+$).
+The capacitor charges almost instantly, allowing the signal to quickly reach the
+upper Schmitt threshold ($V_T^+$).
 
-**Décharge (étirement du signal) :**
+**Discharge (pulse stretching):**
 
-- Résistance de décharge : $R_d$
-- Durée d'impulsion :
-  $t = R_d \cdot C \cdot \ln\left(\frac{V_{CC}}{V_T^-}\right)$
+- Discharge resistor: $R_d$
+- Pulse duration: $t = R_d \cdot C \cdot \ln\left(\frac{V_{CC}}{V_T^-}\right)$
 
-Pour ce projet :
+For this project:
 
-- On souhaite $t \approx 15\,\text{ms}$
-- $R_d = 680\,\text{k}\Omega$ (le calcul donne
+- Target $t \approx 15\,\text{ms}$
+- $R_d = 680\,\text{k}\Omega$ (calculation gives
   $R_d \approx 667\,\text{k}\Omega$)
 - $V_{CC} = 5\,\text{V}$
-- $V_T^- = 1.8\,\text{V}$ (donné par la datasheet)
+- $V_T^- = 1.8\,\text{V}$ (from datasheet)
 - $t = 680\,\text{k}\Omega \times 22\,\text{nF} \times \ln\left(\frac{5}{1.8}\right) \approx 15.3\,\text{ms}$
   => OK
 
-Ce temps garantit une impulsion suffisamment longue pour réveiller l’ATtiny en
-mode sommeil, sans rebonds parasites.
+This time guarantees a pulse long enough to wake up the ATtiny in sleep mode,
+without bounce-induced glitches.
 
-**Composants SW18030** :
+**SW18030 Components**:
 
-- Rs : 470 Ω
-- Cs : 22 nF
-- R_d : 680 kΩ
-- 74LVC1G17 : Bascule de Schmitt avec tampon (non-inverseur).
+- Rs: 470 Ω
+- Cs: 22 nF
+- Rd: 680 kΩ
+- 74LVC1G17: Schmitt trigger buffer (non-inverting).
 
-## Bilan thermique
+## Thermal Budget
 
-### Pertes boost converter
-
-```
-Pertes ≈ (Vout - Vin) × Iout / η
-
-Cas critique : Vin = 3.0V, Vout = 5V, Iout = 400mA, η = 85%
-Pertes = (5 - 3) × 0.4 / 0.85 = 0.94W
-```
-
-**Gestion thermique** :
-
-- Via thermique sous FP6277
-- Plan de masse étendu
-- Copper pour dissipation
-
-### Échauffement MCP73871
-
-Le MCP73871 étant un chargeur switching (vs linéaire), les pertes sont réduites
-:
+### Boost Converter Losses
 
 ```
-Pertes ≈ 0.1W @ 320mA charge (efficiency ~90%)
-ΔT ≈ 0.1W / 8mW/°C ≈ 12°C élévation
+Losses ≈ (Vout - Vin) × Iout / η
+
+Worst case: Vin = 3.0 V, Vout = 5 V, Iout = 400 mA, η = 85%
+Losses = (5 - 3) × 0.4 / 0.85 = 0.94 W
 ```
 
-### Échauffement batterie
+**Thermal management**:
 
-Résistance interne LiPo ≈ 100-200 mΩ
+- Thermal vias under FP6277
+- Large ground plane
+- Copper area for heat spreading
+
+### BQ24073 Heating
+
+Because the BQ24073 is a switching charger (vs linear), losses are reduced:
 
 ```
-Pertes batterie = I² × Ri = 0.4² × 0.15 = 24mW
-ΔT ≈ 24mW / 5mW/°C = 5°C élévation
+Losses ≈ 0.1 W @ 320 mA charge (efficiency ~90%)
+ΔT ≈ 0.1 W / 8 mW/°C ≈ 12 °C temperature rise
 ```
 
-## Protection et sécurité
+### Battery Heating
 
-### Seuils de protection
+LiPo internal resistance ≈ 100–200 mΩ
 
-- **Tension batterie min** : 3.0V (coupure boost)
-- **Courant max** : 500mA (limite software)
-- **Température max** : 70°C (monitoring si capteur ajouté)
-- **FOD Qi** : Détection objets étrangers automatique
+```
+Battery losses = I² × Ri = 0.4² × 0.15 = 24 mW
+ΔT ≈ 24 mW / 5 mW/°C = 5 °C temperature rise
+```
 
-## Brainstorming - Historique des choix de design
+## Protection and Safety
 
-### Problématique initiale : Chargeur sans fil
+### Protection Thresholds
 
-**Motivations pour le Qi** :
+- **Minimum battery voltage**: 3.0 V (boost cutoff)
+- **Max current**: 500 mA (software limit)
+- **Max temperature**: 70 °C (monitoring if a sensor is added)
+- **Qi FOD**: Automatic foreign object detection
 
-- Étanchéité du boîtier (pas de port USB)
-- Expérience utilisateur premium
-- Compatibilité avec chargeurs commerciaux
+## Brainstorming - Design Decision History
 
-**Défis identifiés** :
+### Initial Issue: Wireless Charger
 
-- Modules commerciaux trop chers (>11€)
-- Puissance excessive (15W vs besoin 1.5-3W)
-- Encombrement des bobines
-- Complexité d'intégration PCB
+**Motivations for Qi**:
 
-### Choix de l'IC récepteur
+- Watertight enclosure (no USB port)
+- Premium user experience
+- Compatibility with commercial chargers
 
-**Options évaluées** :
+**Identified challenges**:
 
-- **BQ51003** : 2.5W, plus simple mais limite de puissance
-- **BQ51013B** : 5W, plus de marge, documentation TI excellente
-- **P9025AC (Renesas)** : Moins de documentation publique
+- Off-the-shelf modules too expensive (> €11)
+- Excessive power (15 W vs 1.5–3 W needed)
+- Coil footprint/size
+- PCB integration complexity
 
-**Décision** : BQ51013B pour la documentation et la dispo LCSC (JLCPCB)
+### Receiver IC Choice
 
-### Évolution du système de charge
+**Options evaluated**:
 
-**Version 1 (obsolète)** : TP4056 + DMP1045U
+- **BQ51003**: 2.5 W, simpler but limited power
+- **BQ51013B**: 5 W, more margin, excellent TI documentation
+- **P9025AC (Renesas)**: Less public documentation
 
-- Avantages : Composants connus, schémas de référence disponibles
-- Inconvénients : Power-path artisanal, deux ICs séparés
+**Decision**: BQ51013B for the documentation and availability at LCSC (JLCPCB)
 
-**Version 2 (obsolète)** : MCP73871
+### Power System Evolution
 
-- Avantages : Power-path intégré, plus propre, thermiquement meilleur
-- Inconvénients : Disponibilité, coût
+**Version 1 (obsolete)**: TP4056 + DMP1045U
 
-**Version 3 (actuelle)** : BQ24073
+- Pros: Well-known components, many reference schematics
+- Cons: DIY power-path, two separate ICs
 
-- Avantages : Même fabricant que BQ51013B (TI), switching efficiency, power-path
-  intégré
-- Inconvénients : Complexité de configuration initiale
+**Version 2 (obsolete)**: MCP73871
 
-### Choix de la bobine
+- Pros: Integrated power-path, cleaner, better thermally
+- Cons: Availability, cost
 
-**Critères** :
+**Version 3 (current)**: BQ24073
 
-- Compliance Qi WPC v1.2
-- Dimensions compatibles (≤35mm)
-- Puissance suffisante (3W+)
-- Disponibilité distribueurs
+- Pros: Same manufacturer as BQ51013B (TI), switching efficiency, integrated
+  power-path
+- Cons: More complex initial configuration
 
-**IWAS3010AZEB130KF1 retenue** :
+### Coil Choice
 
-- 30×10mm : compact pour le boîtier flamme
-- 3.5W : marge pour pics de consommation
-- Q=11 : compromis efficacité/bande passante
-- Vishay : marque fiable, stock Mouser/Digikey
+**Criteria**:
 
-### Philosophie power-path
+- Qi WPC v1.2 compliance
+- Suitable dimensions (≤ 35 mm)
+- Sufficient power rating (3 W+)
+- Distributor availability
 
-**Deux niveaux identifiés** :
+**Chosen IWAS3010AZEB130KF1**:
 
-1. **Amont batterie** : Sélection sources (USB/Qi/AC)
-   - Non applicable ici (une seule source Qi)
-   - AD pin du BQ51013B à GND
-2. **Aval batterie** : Système vs batterie
-   - Critique pour éviter décharge batterie pendant charge
-   - MCP73871 gère automatiquement
+- 30 × 10 mm: compact for the flame enclosure
+- 3.5 W: margin for consumption peaks
+- Q = 11: compromise between efficiency and bandwidth
+- Vishay: reliable brand, stock at Mouser/Digikey
 
-### Compromis et décisions finales
+### Power-Path Philosophy
 
-**Backfeed protection** : Non necessaire car pas de sources de recharges
-multiples (uniquement Qi)
+**Two levels identified**:
 
-**Sécurité** : Préférer composants avec protections intégrées (FOD, thermal
-shutdown) vs circuits externes
+1. **Upstream of the battery**: Source selection (USB/Qi/AC)
+   - Not applicable here (single Qi source)
+   - BQ51013B AD pin to GND
+2. **Downstream of the battery**: System vs battery
+   - Critical to avoid discharging the battery during charge
+   - MCP73871 handles this automatically
 
-**BOM** : Privilégier intégration vs coût (MCP73871 vs TP4056+DMP1045)
+### Trade-offs and Final Decisions
+
+**Backfeed protection**: Not required because there are no multiple charge
+sources (Qi only)
+
+**Safety**: Prefer ICs with integrated protections (FOD, thermal shutdown)
+versus external discrete circuits
+
+**BOM**: Prefer integration vs cost (MCP73871 vs TP4056+DMP1045)
 
 ---
 
-## Composants obsolètes (design précédent)
+## Obsolete Components (Previous Design)
 
-### MCP73871 - Chargeur avec power-path intégré
+### MCP73871 - Charger with Integrated Power-Path
 
-**Remplacé par BQ24073**
+**Replaced by BQ24073**
 
-Avantages du MCP73871 :
+Advantages of MCP73871:
 
-- Chargeur Li-ion/Li-Po avec power-path management
-- Commutation automatique entre sources (VIN/USB)
-- Protection contre surcharge/décharge
-- Indication de statut (LEDs)
-- Régulation thermique
+- Li-ion/Li-Po charger with power-path management
+- Automatic source selection (VIN/USB)
+- Overcharge/overdischarge protection
+- Status indication (LEDs)
+- Thermal regulation
 
-Configuration power-path :
+Power-path configuration:
 
-- **VIN** : Alimentation principale (sortie BQ51013B, 5V)
-- **VBAT** : Connexion batterie Li-Po
-- **VOUT** : Sortie système (vers boost FP6277)
-- **Power-path** : Priorité VIN > batterie automatique
+- **VIN**: Main supply (BQ51013B output, 5 V)
+- **VBAT**: Li-Po battery connection
+- **VOUT**: System output (to FP6277 boost)
+- **Power-path**: Automatic priority VIN > battery
 
-Programmation courant de charge : $$I_{CHARGE} = \frac{1000\text{V}}{R_{PROG}}$$
+Charge current programming: $$I_{CHARGE} = \frac{1000\text{V}}{R_{PROG}}$$
 
-Pour 320 mA (1C optimal) : $R_{PROG} = 3.3\,\text{k}\Omega$
+For 320 mA (optimal 1C): $R_{PROG} = 3.3\,\text{k}\Omega$
 
-Limitation courant USB : $$I_{USB} = \frac{515\text{V}}{R_{USB}}$$
+USB current limit: $$I_{USB} = \frac{515\text{V}}{R_{USB}}$$
 
-Pour 500 mA max : $R_{USB} = 1\,\text{k}\Omega$
+For 500 mA max: $R_{USB} = 1\,\text{k}\Omega$
 
-**Composants MCP73871** :
+**MCP73871 Components**:
 
-- RPROG : 3.3 kΩ (charge 303 mA)
-- RUSB : 1 kΩ (limite 515 mA si USB)
-- C1 (VIN) : 4.7 µF, 16V
-- C2 (VBAT) : 4.7 µF, 16V
-- C3 (VOUT) : 4.7 µF, 16V
+- RPROG: 3.3 kΩ (303 mA charge)
+- RUSB: 1 kΩ (515 mA USB limit)
+- C1 (VIN): 4.7 µF, 16 V
+- C2 (VBAT): 4.7 µF, 16 V
+- C3 (VOUT): 4.7 µF, 16 V
 
-**Raisons du changement** : Simplicité du BQ24073, meilleure intégration avec
-récepteur Qi BQ51013B (même fabricant)
+**Reasons for change**: Simpler BQ24073, better integration with Qi receiver
+BQ51013B (same manufacturer)
 
-### TP4056 - Chargeur linéaire Li-ion
+### TP4056 - Linear Li-ion Charger
 
-**Remplacé par BQ24073**
+**Replaced by BQ24073**
 
-Programmation courant de charge via Rprog :
+Charge current programming via Rprog:
 $$R_{PROG} = \frac{1100\,\text{V}}{I_{BAT}}$$
 
-Pour 320 mA : $R_{PROG} = 3.9\,\text{k}\Omega$
+For 320 mA: $R_{PROG} = 3.9\,\text{k}\Omega$
 
-**Inconvénients** :
+**Drawbacks**:
 
-- Chargeur linéaire → dissipation thermique
-- Pas de power-path intégré
-- Nécessite circuit externe pour commutation
+- Linear charger → thermal dissipation
+- No integrated power-path
+- Requires external circuit for power switching
 
-### DMP1045U - P-MOSFET power-path
+### DMP1045U - P-MOSFET Power-Path
 
-**Remplacé par BQ24073**
+**Replaced by BQ24073**
 
-Circuit de commutation automatique entre USB et batterie :
+Automatic switchover circuit between USB and battery:
 
-- Gate relié à USB via diviseur résistif
-- Source sur batterie, drain vers boost
-- Logique : USB présent = MOSFET OFF, absent = MOSFET ON
+- Gate connected to USB via resistor divider
+- Source on battery, drain to boost
+- Logic: USB present = MOSFET OFF, absent = MOSFET ON
 
-**Inconvénients** :
+**Drawbacks**:
 
-- Circuit discret complexe
-- Réglages critiques
-- Pas de protection intégrée
+- Complex discrete circuit
+- Critical tuning
+- No integrated protections
 
 ---
 
-**Dernière mise à jour** : Août 2025  
-**Statut validation** : 🔧 Design finalisé - Prototypage requis
+**Last update**: August 2025  
+**Validation status**: 🔧 Final design - Prototyping required
